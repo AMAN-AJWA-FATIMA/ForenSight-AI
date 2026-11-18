@@ -1,0 +1,12 @@
+/* Splash page: logo, name, two lines. Green and white, amber accent. */
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center; color: #12241D; font: 16px/1.5 Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(60% 50% at 50% 38%, #DFF5EA, transparent 72%), radial-gradient(40% 30% at 92% 100%, rgba(242, 169, 59, .15), transparent 70%), #fff; }
+.splash { padding: 2rem; display: grid; justify-items: center; gap: 1.1rem; }
+.radar { --r: 230px; } .radar img { width: 96px; filter: drop-shadow(0 12px 24px rgba(31, 169, 113, .4)); }
+h1 { margin: .5rem 0 0; font-size: clamp(2.4rem, 7vw, 4.2rem); letter-spacing: .14em; font-weight: 800; color: #0B3F30; } h1 b { color: var(--green); margin-left: .25em; }
+.tag { margin: 0; min-height: 3.4em; max-width: 34ch; font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: #456256; } .tag #l1 { color: #0B3F30; font-weight: 650; }
+.go { padding: .8rem 1.9rem; border-radius: 999px; color: #fff; text-decoration: none; font-weight: 700; background: linear-gradient(120deg, #1FA971, #0B8F6A); box-shadow: 0 10px 26px rgba(31, 169, 113, .35); opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .5s, transform .25s, box-shadow .25s; }
+.go.show { opacity: 1; transform: none; pointer-events: auto; } .go.show:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(31, 169, 113, .45); }
+.bar { width: 160px; height: 3px; border-radius: 9px; background: #DCEBE3; overflow: hidden; opacity: 0; } .bar.run { opacity: 1; }
+.bar i { display: block; height: 100%; width: 0; background: var(--amber); } .bar.run i { animation: fill 2.4s linear forwards; } @keyframes fill { to { width: 100%; } }

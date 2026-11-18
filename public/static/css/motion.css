@@ -1,0 +1,32 @@
+/* Shared motion + components: used by the splash page and the dashboard. */
+:root { --amber: #F2A93B; --green: #1FA971; }
+[hidden] { display: none !important; }
+@keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes spin { to { transform: rotate(1turn); } }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 transparent; } 50% { box-shadow: 0 0 0 5px var(--g), 0 0 24px 6px var(--g); } }
+@keyframes shimmer { to { background-position: -200% 0, 0 0; } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes ping { from { transform: scale(.6); opacity: .9; } to { transform: scale(2.8); opacity: 0; } }
+.fx-up { animation: up .65s cubic-bezier(.2, .8, .2, 1) backwards; animation-delay: calc(var(--i, 0) * 70ms); }
+
+/* radar sweep (malware detection) */
+.radar { position: relative; width: var(--r, 120px); aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; border: 1px solid rgba(31, 169, 113, .4); flex: none;
+  background: repeating-radial-gradient(circle closest-side, transparent 0 24%, rgba(31, 169, 113, .26) 24% 25%), radial-gradient(circle, rgba(31, 169, 113, .12), rgba(31, 169, 113, .02) 75%); }
+.radar::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(rgba(31, 169, 113, .55), rgba(31, 169, 113, 0) 30%, transparent); animation: spin 2.4s linear infinite; }
+.radar::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(rgba(31, 169, 113, .25), rgba(31, 169, 113, .25)) center / 1px 100% no-repeat, linear-gradient(rgba(31, 169, 113, .25), rgba(31, 169, 113, .25)) center / 100% 1px no-repeat; }
+.radar img { position: relative; z-index: 1; }
+.blip { position: absolute; z-index: 2; width: 10px; height: 10px; border-radius: 50%; background: var(--bc, var(--green)); transform: translate(-50%, -50%); }
+.blip::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--bc, var(--green)); animation: ping 1.6s ease-out infinite; }
+
+/* pulsing glow (threat severity) */
+.glow { --g: rgba(31, 169, 113, .35); animation: glow 2.6s ease-in-out infinite; }
+.sev-elev { --g: rgba(242, 169, 59, .5); animation-duration: 1.9s; } .sev-high { --g: rgba(229, 72, 77, .45); animation-duration: 1.3s; } .sev-crit { --g: rgba(229, 72, 77, .55); animation-duration: .9s; }
+
+/* shimmer loading + progress */
+.sk, .is-loading .chart, .is-loading .table-wrap, .is-loading .kpi-row:empty { border-radius: 14px; min-height: 90px; background: linear-gradient(100deg, transparent 30%, rgba(31, 169, 113, .16) 50%, transparent 70%) 0 0 / 200% 100%, var(--soft, #EAF3EE); animation: shimmer 1.3s linear infinite; }
+.prog { height: 8px; border-radius: 99px; background: var(--soft, #EAF3EE); overflow: hidden; } .prog i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--green), var(--amber)); transition: width .35s ease; }
+
+/* typing caret */
+.caret { display: inline-block; width: 2px; height: 1em; margin-left: 3px; vertical-align: -.15em; background: var(--amber); animation: blink 1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
