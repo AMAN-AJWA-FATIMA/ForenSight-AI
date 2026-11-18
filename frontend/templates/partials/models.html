@@ -1,0 +1,11 @@
+<section class="view" id="view-models">
+  <div class="seg" role="group" aria-label="Choose what to show"><button data-show="table">Comparison</button><button data-show="curves">Curves</button><button data-show="matrices">Matrices</button><button data-show="reliability">Reliability</button><button data-show="all">Show all</button></div>
+  <div class="card" data-panel="table"><h3>Model comparison <span class="muted">· held-out test set</span></h3><div class="table-wrap" id="model-table"></div>
+    <p class="muted" id="model-note"></p></div>
+  <div class="flow" data-panel="curves">
+    <div class="card"><h3>ROC curves</h3><div class="chart tall"><canvas id="c-m-roc"></canvas></div></div>
+    <div class="card"><h3>Precision–recall curves</h3><div class="chart tall"><canvas id="c-m-pr"></canvas></div></div>
+  </div>
+  <div class="flow" id="cms" data-panel="matrices"></div>
+  <div class="card" data-panel="reliability"><h3>Reliability check <span class="muted">· selected model</span></h3><div class="table-wrap" id="reliability"></div><p class="muted" id="reliability-note"></p></div>
+</section>

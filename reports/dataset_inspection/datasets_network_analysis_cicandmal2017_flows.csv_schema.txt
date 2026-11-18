@@ -1,0 +1,331 @@
+Dataset: datasets/network_analysis/cicandmal2017_flows.csv
+Rows inspected: 200000
+Columns: 87
+Shape inspected: (200000, 87)
+
+COLUMN NAMES AND DATA TYPES:
+Flow ID                            str
+Source IP                          str
+Source Port                    float64
+Destination IP                     str
+Destination Port               float64
+Protocol                       float64
+Timestamp                          str
+Flow Duration                  float64
+Total Fwd Packets              float64
+Total Backward Packets         float64
+Total Length of Fwd Packets    float64
+Total Length of Bwd Packets    float64
+Fwd Packet Length Max          float64
+Fwd Packet Length Min          float64
+Fwd Packet Length Mean         float64
+Fwd Packet Length Std          float64
+Bwd Packet Length Max          float64
+Bwd Packet Length Min          float64
+Bwd Packet Length Mean         float64
+Bwd Packet Length Std          float64
+Flow Bytes/s                   float64
+Flow Packets/s                 float64
+Flow IAT Mean                  float64
+Flow IAT Std                   float64
+Flow IAT Max                   float64
+Flow IAT Min                   float64
+Fwd IAT Total                  float64
+Fwd IAT Mean                   float64
+Fwd IAT Std                    float64
+Fwd IAT Max                    float64
+Fwd IAT Min                    float64
+Bwd IAT Total                  float64
+Bwd IAT Mean                   float64
+Bwd IAT Std                    float64
+Bwd IAT Max                    float64
+Bwd IAT Min                    float64
+Fwd PSH Flags                  float64
+Bwd PSH Flags                  float64
+Fwd URG Flags                  float64
+Bwd URG Flags                  float64
+Fwd Header Length              float64
+Bwd Header Length              float64
+Fwd Packets/s                  float64
+Bwd Packets/s                  float64
+Min Packet Length              float64
+Max Packet Length              float64
+Packet Length Mean             float64
+Packet Length Std              float64
+Packet Length Variance         float64
+FIN Flag Count                 float64
+SYN Flag Count                 float64
+RST Flag Count                 float64
+PSH Flag Count                 float64
+ACK Flag Count                 float64
+URG Flag Count                 float64
+CWE Flag Count                 float64
+ECE Flag Count                 float64
+Down/Up Ratio                  float64
+Average Packet Size            float64
+Avg Fwd Segment Size           float64
+Avg Bwd Segment Size           float64
+Fwd Header Length.1            float64
+Fwd Avg Bytes/Bulk             float64
+Fwd Avg Packets/Bulk           float64
+Fwd Avg Bulk Rate              float64
+Bwd Avg Bytes/Bulk             float64
+Bwd Avg Packets/Bulk           float64
+Bwd Avg Bulk Rate              float64
+Subflow Fwd Packets            float64
+Subflow Fwd Bytes              float64
+Subflow Bwd Packets            float64
+Subflow Bwd Bytes              float64
+Init_Win_bytes_forward         float64
+Init_Win_bytes_backward        float64
+act_data_pkt_fwd               float64
+min_seg_size_forward           float64
+Active Mean                    float64
+Active Std                     float64
+Active Max                     float64
+Active Min                     float64
+Idle Mean                      float64
+Idle Std                       float64
+Idle Max                       float64
+Idle Min                       float64
+Label                              str
+label_binary                     int64
+source_file                        str
+
+MISSING VALUES:
+Flow ID                        0
+Source IP                      0
+Source Port                    0
+Destination IP                 0
+Destination Port               0
+Protocol                       0
+Timestamp                      0
+Flow Duration                  0
+Total Fwd Packets              0
+Total Backward Packets         0
+Total Length of Fwd Packets    0
+Total Length of Bwd Packets    0
+Fwd Packet Length Max          0
+Fwd Packet Length Min          0
+Fwd Packet Length Mean         0
+Fwd Packet Length Std          0
+Bwd Packet Length Max          0
+Bwd Packet Length Min          0
+Bwd Packet Length Mean         0
+Bwd Packet Length Std          0
+Flow Bytes/s                   0
+Flow Packets/s                 0
+Flow IAT Mean                  0
+Flow IAT Std                   0
+Flow IAT Max                   0
+Flow IAT Min                   0
+Fwd IAT Total                  0
+Fwd IAT Mean                   0
+Fwd IAT Std                    0
+Fwd IAT Max                    0
+Fwd IAT Min                    0
+Bwd IAT Total                  0
+Bwd IAT Mean                   0
+Bwd IAT Std                    0
+Bwd IAT Max                    1
+Bwd IAT Min                    1
+Fwd PSH Flags                  1
+Bwd PSH Flags                  1
+Fwd URG Flags                  1
+Bwd URG Flags                  1
+Fwd Header Length              1
+Bwd Header Length              1
+Fwd Packets/s                  1
+Bwd Packets/s                  1
+Min Packet Length              1
+Max Packet Length              1
+Packet Length Mean             1
+Packet Length Std              1
+Packet Length Variance         1
+FIN Flag Count                 1
+SYN Flag Count                 1
+RST Flag Count                 1
+PSH Flag Count                 1
+ACK Flag Count                 1
+URG Flag Count                 1
+CWE Flag Count                 1
+ECE Flag Count                 1
+Down/Up Ratio                  1
+Average Packet Size            1
+Avg Fwd Segment Size           1
+Avg Bwd Segment Size           1
+Fwd Header Length.1            1
+Fwd Avg Bytes/Bulk             1
+Fwd Avg Packets/Bulk           1
+Fwd Avg Bulk Rate              1
+Bwd Avg Bytes/Bulk             1
+Bwd Avg Packets/Bulk           1
+Bwd Avg Bulk Rate              1
+Subflow Fwd Packets            1
+Subflow Fwd Bytes              1
+Subflow Bwd Packets            1
+Subflow Bwd Bytes              1
+Init_Win_bytes_forward         1
+Init_Win_bytes_backward        1
+act_data_pkt_fwd               1
+min_seg_size_forward           1
+Active Mean                    1
+Active Std                     1
+Active Max                     1
+Active Min                     1
+Idle Mean                      1
+Idle Std                       1
+Idle Max                       1
+Idle Min                       1
+Label                          1
+label_binary                   0
+source_file                    0
+
+UNIQUE VALUES:
+Flow ID                        174505
+Source IP                        2848
+Source Port                     42980
+Destination IP                   5772
+Destination Port                16488
+Protocol                            3
+Timestamp                      124421
+Flow Duration                  159694
+Total Fwd Packets                 543
+Total Backward Packets            831
+Total Length of Fwd Packets      8297
+Total Length of Bwd Packets     18525
+Fwd Packet Length Max            1446
+Fwd Packet Length Min             181
+Fwd Packet Length Mean          25191
+Fwd Packet Length Std           30714
+Bwd Packet Length Max            1252
+Bwd Packet Length Min             402
+Bwd Packet Length Mean          28049
+Bwd Packet Length Std           31467
+Flow Bytes/s                   106968
+Flow Packets/s                 164144
+Flow IAT Mean                  162970
+Flow IAT Std                    95150
+Flow IAT Max                   154513
+Flow IAT Min                    83283
+Fwd IAT Total                  118980
+Fwd IAT Mean                   120530
+Fwd IAT Std                     82494
+Fwd IAT Max                    116746
+Fwd IAT Min                     60951
+Bwd IAT Total                   66559
+Bwd IAT Mean                    67309
+Bwd IAT Std                     61826
+Bwd IAT Max                     64901
+Bwd IAT Min                     12335
+Fwd PSH Flags                       2
+Bwd PSH Flags                       1
+Fwd URG Flags                       1
+Bwd URG Flags                       1
+Fwd Header Length                1530
+Bwd Header Length                1728
+Fwd Packets/s                  163944
+Bwd Packets/s                  118335
+Min Packet Length                  90
+Max Packet Length                1443
+Packet Length Mean              40024
+Packet Length Std               42977
+Packet Length Variance          43123
+FIN Flag Count                      2
+SYN Flag Count                      2
+RST Flag Count                      1
+PSH Flag Count                      2
+ACK Flag Count                      2
+URG Flag Count                      2
+CWE Flag Count                      1
+ECE Flag Count                      1
+Down/Up Ratio                      15
+Average Packet Size             36024
+Avg Fwd Segment Size            22121
+Avg Bwd Segment Size            25979
+Fwd Header Length.1              1530
+Fwd Avg Bytes/Bulk                  1
+Fwd Avg Packets/Bulk                1
+Fwd Avg Bulk Rate                   1
+Bwd Avg Bytes/Bulk                  1
+Bwd Avg Packets/Bulk                1
+Bwd Avg Bulk Rate                   1
+Subflow Fwd Packets               543
+Subflow Fwd Bytes                8297
+Subflow Bwd Packets               831
+Subflow Bwd Bytes               18525
+Init_Win_bytes_forward           3775
+Init_Win_bytes_backward          3222
+act_data_pkt_fwd                  205
+min_seg_size_forward               20
+Active Mean                     21718
+Active Std                       3927
+Active Max                      21679
+Active Min                      21496
+Idle Mean                       23518
+Idle Std                         5627
+Idle Max                        23503
+Idle Min                        23514
+Label                              32
+label_binary                        2
+source_file                      2000
+
+NUMERIC STATISTICS:
+        Source Port  Destination Port       Protocol  Flow Duration  Total Fwd Packets  Total Backward Packets  Total Length of Fwd Packets  Total Length of Bwd Packets  Fwd Packet Length Max  Fwd Packet Length Min  Fwd Packet Length Mean  Fwd Packet Length Std  Bwd Packet Length Max  Bwd Packet Length Min  Bwd Packet Length Mean  Bwd Packet Length Std  Flow Bytes/s  Flow Packets/s  Flow IAT Mean  Flow IAT Std  Flow IAT Max  Flow IAT Min  Fwd IAT Total  Fwd IAT Mean   Fwd IAT Std   Fwd IAT Max   Fwd IAT Min  Bwd IAT Total  Bwd IAT Mean   Bwd IAT Std   Bwd IAT Max   Bwd IAT Min  Fwd PSH Flags  Bwd PSH Flags  Fwd URG Flags  Bwd URG Flags  Fwd Header Length  Bwd Header Length  Fwd Packets/s   Bwd Packets/s  Min Packet Length  Max Packet Length  Packet Length Mean  Packet Length Std  Packet Length Variance  FIN Flag Count  SYN Flag Count  RST Flag Count  PSH Flag Count  ACK Flag Count  URG Flag Count  CWE Flag Count  ECE Flag Count  Down/Up Ratio  Average Packet Size  Avg Fwd Segment Size  Avg Bwd Segment Size  Fwd Header Length.1  Fwd Avg Bytes/Bulk  Fwd Avg Packets/Bulk  Fwd Avg Bulk Rate  Bwd Avg Bytes/Bulk  Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets  Subflow Fwd Bytes  Subflow Bwd Packets  Subflow Bwd Bytes  Init_Win_bytes_forward  Init_Win_bytes_backward  act_data_pkt_fwd  min_seg_size_forward   Active Mean    Active Std    Active Max    Active Min     Idle Mean      Idle Std      Idle Max      Idle Min   label_binary
+count  200000.00000     200000.000000  200000.000000   2.000000e+05      200000.000000           200000.000000                 2.000000e+05                 2.000000e+05          200000.000000          200000.000000           200000.000000          200000.000000          200000.000000          200000.000000           200000.000000          200000.000000  2.000000e+05    2.000000e+05   2.000000e+05  2.000000e+05  2.000000e+05  2.000000e+05   2.000000e+05  2.000000e+05  2.000000e+05  2.000000e+05  2.000000e+05   2.000000e+05  2.000000e+05  2.000000e+05  1.999990e+05  1.999990e+05  199999.000000       199999.0       199999.0       199999.0       1.999990e+05       1.999990e+05   1.999990e+05   199999.000000      199999.000000      199999.000000       199999.000000      199999.000000            1.999990e+05   199999.000000   199999.000000        199999.0   199999.000000   199999.000000   199999.000000        199999.0        199999.0  199999.000000        199999.000000         199999.000000         199999.000000         1.999990e+05            199999.0              199999.0           199999.0            199999.0              199999.0           199999.0        199999.000000       1.999990e+05        199999.000000       1.999990e+05           199999.000000            199999.000000     199999.000000          1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  1.999990e+05  200000.000000
+mean    38286.76378       6281.737685       8.072740   1.096968e+07           7.983960               12.372580                 1.020792e+03                 1.353840e+04             212.604385              10.861475               59.025925              77.081120             343.132430              22.125050              180.310163             129.914855  1.041497e+05    5.738459e+03   2.943147e+06  2.526767e+06  9.442407e+06  1.761342e+06   7.308164e+06  2.931475e+06  1.904867e+06  5.967403e+06  1.815854e+06   5.975226e+06  1.039548e+06  1.527577e+06  5.084718e+06  3.760364e+05       0.091005            0.0            0.0            0.0      -6.232822e+05      -1.112285e+06   4.494561e+03     1243.927566           7.550888         391.513238          124.599607         151.763144            7.759657e+04        0.015285        0.091005             0.0        0.308302        0.474152        0.230736             0.0             0.0       0.605923           136.300817             59.025196            180.310760        -6.232822e+05                 0.0                   0.0                0.0                 0.0                   0.0                0.0             7.983970       1.020790e+03            12.372617       1.353847e+04            21800.179136              1777.297766          1.888144         -4.389637e+03  1.532042e+05  2.218420e+04  1.747272e+05  1.357454e+05  4.402624e+06  3.973091e+05  4.739455e+06  4.100176e+06       0.150000
+std     18894.35601      15771.566675       4.410855   2.265054e+07          53.829189              167.089327                 3.415550e+04                 2.388710e+05             399.249068              47.298484              126.451619             153.166982             566.029746              64.306348              328.182556             235.026889  8.450097e+05    3.824627e+04   8.092974e+06  6.624897e+06  1.906807e+07  7.343033e+06   1.893549e+07  8.567104e+06  6.290638e+06  1.477955e+07  7.714599e+06   1.870432e+07  4.999135e+06  5.742444e+06  1.604358e+07  3.972467e+06       0.287618            0.0            0.0            0.0       2.807533e+08       4.991144e+08   3.257140e+04    11897.609975          19.707712         604.326067          210.689120         233.591084            1.465894e+05        0.122685        0.287618             0.0        0.461793        0.499333        0.421305             0.0             0.0       0.691385           216.020092            126.451515            328.183268         2.807533e+08                 0.0                   0.0                0.0                 0.0                   0.0                0.0            53.829323       3.415558e+04           167.089744       2.388716e+05            30190.976694              7943.109235         25.191377          3.188613e+06  9.501346e+05  3.268128e+05  1.101117e+06  8.929495e+05  1.529332e+07  3.328792e+06  1.614275e+07  1.489133e+07       0.357072
+min         0.00000          0.000000       0.000000   1.000000e+00           1.000000                0.000000                 0.000000e+00                 0.000000e+00               0.000000               0.000000                0.000000               0.000000               0.000000               0.000000                0.000000               0.000000  0.000000e+00    1.667048e-02   1.000000e+00  0.000000e+00  1.000000e+00 -2.100000e+01   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000            0.0            0.0            0.0      -1.255556e+11      -2.232099e+11   8.357311e-03        0.000000           0.000000           0.000000            0.000000           0.000000            0.000000e+00        0.000000        0.000000             0.0        0.000000        0.000000        0.000000             0.0             0.0       0.000000             0.000000              0.000000              0.000000        -1.255556e+11                 0.0                   0.0                0.0                 0.0                   0.0                0.0             1.000000       0.000000e+00             0.000000       0.000000e+00               -1.000000                -1.000000          0.000000         -1.395062e+09  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000
+25%     33900.00000         80.000000       6.000000   4.233750e+04           1.000000                0.000000                 0.000000e+00                 0.000000e+00               0.000000               0.000000                0.000000               0.000000               0.000000               0.000000                0.000000               0.000000  0.000000e+00    7.618972e-01   2.150933e+04  0.000000e+00  3.709900e+04  2.800000e+01   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000            0.0            0.0            0.0       3.200000e+01       0.000000e+00   4.830125e-01        0.000000           0.000000           0.000000            0.000000           0.000000            0.000000e+00        0.000000        0.000000             0.0        0.000000        0.000000        0.000000             0.0             0.0       0.000000             0.000000              0.000000              0.000000         3.200000e+01                 0.0                   0.0                0.0                 0.0                   0.0                0.0             1.000000       0.000000e+00             0.000000       0.000000e+00              110.000000                -1.000000          0.000000          2.000000e+01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000
+50%     43203.00000        443.000000       6.000000   4.402290e+05           2.000000                1.000000                 3.100000e+01                 0.000000e+00              31.000000               0.000000               26.000000               0.000000               0.000000               0.000000                0.000000               0.000000  1.078562e+02    1.140161e+01   1.300390e+05  0.000000e+00  2.609950e+05  3.951000e+03   2.003480e+05  3.559267e+04  0.000000e+00  9.352200e+04  6.500000e+01   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000            0.0            0.0            0.0       6.400000e+01       3.200000e+01   6.218510e+00        1.277794           0.000000          45.000000           31.000000          17.897858            3.203333e+02        0.000000        0.000000             0.0        0.000000        0.000000        0.000000             0.0             0.0       1.000000            41.000000             26.000000              0.000000         6.400000e+01                 0.0                   0.0                0.0                 0.0                   0.0                0.0             2.000000       3.100000e+01             1.000000       0.000000e+00             1505.000000                14.000000          0.000000          3.200000e+01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000
+75%     52306.00000        443.000000       6.000000   1.038130e+07           6.000000                4.000000                 4.070000e+02                 4.160000e+02             318.000000               0.000000               52.387749              94.479485             317.000000               0.000000              164.000000             125.411323  2.882836e+03    6.456403e+01   1.741215e+06  1.197616e+06  9.735332e+06  1.032245e+05   3.429710e+06  1.036976e+06  1.368784e+05  2.637711e+06  3.927350e+04   2.634350e+05  3.638455e+04  3.673004e+04  1.370415e+05  6.000000e+00       0.000000            0.0            0.0            0.0       1.600000e+02       1.360000e+02   3.424636e+01       21.342667           0.000000         653.000000          146.250000         247.204832            6.111023e+04        0.000000        0.000000             0.0        1.000000        1.000000        0.000000             0.0             0.0       1.000000           174.142857             52.386531            164.000000         1.600000e+02                 0.0                   0.0                0.0                 0.0                   0.0                0.0             6.000000       4.070000e+02             4.000000       4.160000e+02            65535.000000               357.000000          1.000000          3.200000e+01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000
+max     65533.00000      65266.000000      17.000000   1.200000e+08        6735.000000            14878.000000                 9.730929e+06                 2.148500e+07           13032.000000            1460.000000             2655.422018            3180.760749           13032.000000            1460.000000             1460.000000            1080.112133  1.060000e+08    2.000000e+06   1.199725e+08  8.483161e+07  1.199725e+08  1.199725e+08   1.200000e+08  1.199725e+08  8.483161e+07  1.199725e+08  1.199725e+08   1.199848e+08  1.188009e+08  8.455270e+07  1.198945e+08  1.188009e+08       1.000000            0.0            0.0            0.0       3.410499e+08       1.705248e+08   2.000000e+06  1000000.000000        1452.000000       13032.000000         1452.000000        2148.623393            4.616582e+06        1.000000        1.000000             0.0        1.000000        1.000000        1.000000             0.0             0.0      35.000000          1761.000000           2655.422018           1460.000000         3.410499e+08                 0.0                   0.0                0.0                 0.0                   0.0                0.0          6735.000000       9.730929e+06         14878.000000       2.148500e+07            65535.000000             65535.000000       6734.000000          1.705247e+08  1.016251e+08  3.038309e+07  1.016251e+08  1.016251e+08  1.199708e+08  7.547153e+07  1.199708e+08  1.199708e+08       1.000000
+
+SAMPLE ROWS:
+                                   Flow ID      Source IP  Source Port  Destination IP  Destination Port  Protocol            Timestamp  Flow Duration  Total Fwd Packets  Total Backward Packets  Total Length of Fwd Packets  Total Length of Bwd Packets  Fwd Packet Length Max  Fwd Packet Length Min  Fwd Packet Length Mean  Fwd Packet Length Std  Bwd Packet Length Max  Bwd Packet Length Min  Bwd Packet Length Mean  Bwd Packet Length Std   Flow Bytes/s  Flow Packets/s  Flow IAT Mean  Flow IAT Std  Flow IAT Max  Flow IAT Min  Fwd IAT Total  Fwd IAT Mean   Fwd IAT Std  Fwd IAT Max  Fwd IAT Min  Bwd IAT Total  Bwd IAT Mean  Bwd IAT Std  Bwd IAT Max  Bwd IAT Min  Fwd PSH Flags  Bwd PSH Flags  Fwd URG Flags  Bwd URG Flags  Fwd Header Length  Bwd Header Length  Fwd Packets/s  Bwd Packets/s  Min Packet Length  Max Packet Length  Packet Length Mean  Packet Length Std  Packet Length Variance  FIN Flag Count  SYN Flag Count  RST Flag Count  PSH Flag Count  ACK Flag Count  URG Flag Count  CWE Flag Count  ECE Flag Count  Down/Up Ratio  Average Packet Size  Avg Fwd Segment Size  Avg Bwd Segment Size  Fwd Header Length.1  Fwd Avg Bytes/Bulk  Fwd Avg Packets/Bulk  Fwd Avg Bulk Rate  Bwd Avg Bytes/Bulk  Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets  Subflow Fwd Bytes  Subflow Bwd Packets  Subflow Bwd Bytes  Init_Win_bytes_forward  Init_Win_bytes_backward  act_data_pkt_fwd  min_seg_size_forward  Active Mean  Active Std  Active Max  Active Min  Idle Mean  Idle Std  Idle Max  Idle Min          Label  label_binary                                                                                          source_file
+0         10.42.0.211-10.42.0.1-1516-53-17    10.42.0.211       1516.0       10.42.0.1              53.0      17.0  14/06/2017 04:22:52          839.0                1.0                     1.0                         42.0                         92.0                   42.0                   42.0                    42.0                    0.0                   92.0                   92.0                    92.0                    0.0  159713.945173     2383.790226          839.0  0.000000e+00         839.0         839.0            0.0           0.0  0.000000e+00          0.0          0.0            0.0           0.0          0.0          0.0          0.0            0.0            0.0            0.0            0.0               32.0               32.0    1191.895113    1191.895113               42.0               92.0           58.666667          28.867513              833.333333             0.0             0.0             0.0             0.0             0.0             0.0             0.0             0.0            1.0                 88.0                  42.0                  92.0                 32.0                 0.0                   0.0                0.0                 0.0                   0.0                0.0                  1.0               42.0                  1.0               92.0                    -1.0                     -1.0               0.0                  32.0          0.0         0.0         0.0         0.0        0.0       0.0       0.0       0.0  ADWARE_DOWGIN             1  Adware-CSVs/Adware/Dowgin/06_14_2017-ad-dowgin-gdata-1c4e357a8ec5f13de4ffd57cc2711afe.pcap_ISCX.csv
+1    10.42.0.211-106.39.169.66-51610-443-6  106.39.169.66        443.0     10.42.0.211           51610.0       6.0  14/06/2017 04:58:31          228.0                2.0                     0.0                          0.0                          0.0                    0.0                    0.0                     0.0                    0.0                    0.0                    0.0                     0.0                    0.0       0.000000     8771.929825          228.0  0.000000e+00         228.0         228.0          228.0         228.0  0.000000e+00        228.0        228.0            0.0           0.0          0.0          0.0          0.0            0.0            0.0            0.0            0.0               40.0                0.0    8771.929825       0.000000                0.0                0.0            0.000000           0.000000                0.000000             0.0             0.0             0.0             0.0             1.0             0.0             0.0             0.0            0.0                  0.0                   0.0                   0.0                 40.0                 0.0                   0.0                0.0                 0.0                   0.0                0.0                  2.0                0.0                  0.0                0.0                   115.0                     -1.0               0.0                  20.0          0.0         0.0         0.0         0.0        0.0       0.0       0.0       0.0  ADWARE_DOWGIN             1  Adware-CSVs/Adware/Dowgin/06_14_2017-ad-dowgin-gdata-1c4e357a8ec5f13de4ffd57cc2711afe.pcap_ISCX.csv
+2  157.55.130.154-10.42.0.211-443-60774-17    10.42.0.211      60774.0  157.55.130.154             443.0      17.0  14/06/2017 04:44:14        46346.0                1.0                     1.0                         18.0                         26.0                   18.0                   18.0                    18.0                    0.0                   26.0                   26.0                    26.0                    0.0     949.380745       43.153670        46346.0  0.000000e+00       46346.0       46346.0            0.0           0.0  0.000000e+00          0.0          0.0            0.0           0.0          0.0          0.0          0.0            0.0            0.0            0.0            0.0               32.0               32.0      21.576835      21.576835               18.0               26.0           20.666667           4.618802               21.333333             0.0             0.0             0.0             0.0             0.0             0.0             0.0             0.0            1.0                 31.0                  18.0                  26.0                 32.0                 0.0                   0.0                0.0                 0.0                   0.0                0.0                  1.0               18.0                  1.0               26.0                    -1.0                     -1.0               0.0                  32.0          0.0         0.0         0.0         0.0        0.0       0.0       0.0       0.0  ADWARE_DOWGIN             1  Adware-CSVs/Adware/Dowgin/06_14_2017-ad-dowgin-gdata-1c4e357a8ec5f13de4ffd57cc2711afe.pcap_ISCX.csv
+3    172.217.11.46-10.42.0.211-443-60784-6  172.217.11.46        443.0     10.42.0.211           60784.0       6.0  14/06/2017 04:52:14         1670.0                1.0                     1.0                          0.0                          0.0                    0.0                    0.0                     0.0                    0.0                    0.0                    0.0                     0.0                    0.0       0.000000     1197.604790         1670.0  0.000000e+00        1670.0        1670.0            0.0           0.0  0.000000e+00          0.0          0.0            0.0           0.0          0.0          0.0          0.0            0.0            0.0            0.0            0.0               32.0               32.0     598.802395     598.802395                0.0                0.0            0.000000           0.000000                0.000000             0.0             0.0             0.0             0.0             1.0             1.0             0.0             0.0            1.0                  0.0                   0.0                   0.0                 32.0                 0.0                   0.0                0.0                 0.0                   0.0                0.0                  1.0                0.0                  1.0                0.0                   349.0                   1386.0               0.0                  32.0          0.0         0.0         0.0         0.0        0.0       0.0       0.0       0.0  ADWARE_DOWGIN             1  Adware-CSVs/Adware/Dowgin/06_14_2017-ad-dowgin-gdata-1c4e357a8ec5f13de4ffd57cc2711afe.pcap_ISCX.csv
+4     172.217.10.8-10.42.0.211-443-57334-6    10.42.0.211      57334.0    172.217.10.8             443.0       6.0  14/06/2017 05:02:53      2830322.0                3.0                     0.0                          0.0                          0.0                    0.0                    0.0                     0.0                    0.0                    0.0                    0.0                     0.0                    0.0       0.000000        1.059950      1415161.0  1.829571e+06     2708863.0      121459.0      2830322.0     1415161.0  1.829571e+06    2708863.0     121459.0            0.0           0.0          0.0          0.0          0.0            0.0            0.0            0.0            0.0               96.0                0.0       1.059950       0.000000                0.0                0.0            0.000000           0.000000                0.000000             0.0             0.0             0.0             0.0             1.0             1.0             0.0             0.0            0.0                  0.0                   0.0                   0.0                 96.0                 0.0                   0.0                0.0                 0.0                   0.0                0.0                  3.0                0.0                  0.0                0.0                   357.0                     -1.0               0.0                  32.0          0.0         0.0         0.0         0.0        0.0       0.0       0.0       0.0  ADWARE_DOWGIN             1  Adware-CSVs/Adware/Dowgin/06_14_2017-ad-dowgin-gdata-1c4e357a8ec5f13de4ffd57cc2711afe.pcap_ISCX.csv
+
+DISTRIBUTION OF Label:
+Label
+BENIGN                    170017
+ADWARE_FEIWO                1500
+ADWARE_GOOLIGAN             1400
+ADWARE_KEMOGE               1100
+RANSOMWARE_SVPENG           1100
+SMSMALWARE_NANDROBOX        1100
+SMSMALWARE_BIIGE            1083
+ADWARE_DOWGIN               1000
+ADWARE_EWIND                1000
+ADWARE_KOODOUS              1000
+ADWARE_MOBIDASH             1000
+ADWARE_SHUANET              1000
+ADWARE_YOUMI                1000
+RANSOMWARE_CHARGER          1000
+RANSOMWARE_JISUT            1000
+RANSOMWARE_KOLER            1000
+RANSOMWARE_LOCKERPIN        1000
+RANSOMWARE_PLETOR           1000
+RANSOMWARE_PORNDROID        1000
+RANSOMWARE_RANSOMBO         1000
+RANSOMWARE_SIMPLOCKER       1000
+RANSOMWARE_WANNALOCKER      1000
+SMSMALWARE_FAKEMART         1000
+SMSMALWARE_FAKEINST         1000
+SMSMALWARE_JIFAKE           1000
+SMSMALWARE_PLANKTON         1000
+SMSMALWARE_FAKENOTIFY        904
+SMSMALWARE_MAZARBOT          900
+SMSMALWARE_BEANBOT           806
+SMSMALWARE_SMSSNIFFER        500
+ADWARE_SELFMITE              400
+SCAREWARE                    189
+NaN                            1
+
+DISTRIBUTION OF label_binary:
+label_binary
+0    170000
+1     30000

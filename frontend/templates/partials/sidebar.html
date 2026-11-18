@@ -1,0 +1,15 @@
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="{{ url_for('main.landing') }}" title="Back to the home page"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="36" height="34"><span>ForenSight-AI</b></span></a>
+  <nav id="nav"><i class="nav-pill" id="nav-pill"></i>
+    <a href="#dashboard" data-view="dashboard"><span data-icon="grid"></span>Dashboard</a>
+    <a href="#data" data-view="data"><span data-icon="database"></span>Dataset</a>
+    <a href="#models" data-view="models"><span data-icon="bars"></span>Models</a>
+    <a href="#explain" data-view="explain"><span data-icon="eye"></span>Explainability</a>
+    <a href="#detect" data-view="detect"><span data-icon="shield"></span>Detect</a>
+  </nav>
+  <div class="side-bottom">
+    <a class="home-link" href="{{ url_for('main.landing') }}"><span data-icon="home"></span>Home page</a>
+    <button class="theme-btn" id="theme-btn" aria-label="Switch light or dark theme"><span data-icon="moon" id="theme-icon"></span><span id="theme-label">Dark mode</span></button>
+  </div>
+</aside>
+<button class="menu-btn" id="menu-btn" aria-label="Open menu"><span data-icon="menu"></span></button>

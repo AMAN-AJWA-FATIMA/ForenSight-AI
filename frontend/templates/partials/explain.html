@@ -1,0 +1,9 @@
+<section class="view" id="view-explain">
+  <div class="note" id="explain-note"></div>
+  <div class="seg" role="group" aria-label="Choose what to show"><button data-show="importance">Importance</button><button data-show="latest">Latest analysis</button><button data-show="all">Show all</button></div>
+  <div class="flow" data-panel="importance">
+    <div class="card"><h3>Model importance</h3><p class="muted" id="imp-native-sub"></p><div class="chart tall"><canvas id="c-imp-native"></canvas></div></div>
+    <div class="card"><h3>Permutation importance</h3><p class="muted" id="imp-perm-sub"></p><div class="chart tall"><canvas id="c-imp-perm"></canvas></div></div>
+  </div>
+  <div class="card" data-panel="latest"><h3>Explanation of the latest analysis</h3><p class="muted">Each bar shows how the malware probability changes when that feature is replaced by its typical training value.</p><div id="explain-local"></div></div>
+</section>

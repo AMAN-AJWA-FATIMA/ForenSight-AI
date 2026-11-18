@@ -1,0 +1,78 @@
+{
+  "balance": {
+    "flows": {
+      "benign": 167007,
+      "malware": 41000
+    },
+    "imbalance_ratio_flows": 4.07,
+    "captures": {
+      "benign": 1700,
+      "malware": 413
+    },
+    "flows_per_capture": {
+      "count": 2113.0,
+      "mean": 98.4,
+      "std": 1.7,
+      "min": 89.0,
+      "25%": 98.0,
+      "50%": 99.0,
+      "75%": 100.0,
+      "max": 100.0
+    },
+    "note": "static data ratio is 531:131 (about 4:1) and scores well, so a ~4:1 ratio alone is NOT the root cause. The independent units here are CAPTURES, not flows."
+  },
+  "label_noise": {
+    "feature_vectors_seen_with_BOTH_labels": 457,
+    "flows_involved": 914,
+    "share_of_flows_%": 0.44,
+    "note": "every flow inherits its capture's label, so ordinary background traffic inside a malware capture is labelled malware. Identical flows with opposite labels cap the best possible flow-level score."
+  },
+  "features": {
+    "n_features": 79,
+    "duplicate_columns_in_sample": 17,
+    "missing_cells_%": 0.0,
+    "strongest_single_features(|2*AUC-1|)": {
+      "Fwd IAT Total": 0.055,
+      "Fwd IAT Max": 0.055,
+      "Fwd IAT Mean": 0.052,
+      "Fwd IAT Std": 0.047,
+      "Down/Up Ratio": 0.045,
+      "min_seg_size_forward": 0.044,
+      "Flow Packets/s": 0.039,
+      "URG Flag Count": 0.039,
+      "Flow Duration": 0.038,
+      "Fwd Packets/s": 0.038
+    },
+    "features_with_|2*AUC-1|<0.1_%": 100.0,
+    "tiny_flows": {
+      "share_flows_with_<=2_packets_benign_%": 50.9,
+      "share_flows_with_<=2_packets_malware_%": 49.4
+    },
+    "note": "if almost no single feature separates the classes, flow statistics alone are weak evidence; tiny flows (DNS, handshakes) look the same for any app."
+  },
+  "split_effect": {
+    "random_row_split_(LEAKY, do not report)": {
+      "f1": 0.3756,
+      "precision": 0.3275,
+      "recall": 0.4403,
+      "roc_auc": 0.6697
+    },
+    "group_split_(honest)": {
+      "f1": 0.3538,
+      "precision": 0.3103,
+      "recall": 0.4114,
+      "roc_auc": 0.6488
+    },
+    "note": "the gap is how much a random split would have flattered the model by letting near-identical flows of one capture sit on both sides."
+  },
+  "unit_of_analysis": {
+    "flow_level_roc_auc": 0.6488,
+    "capture_level_roc_auc_(mean flow score per capture)": 0.9355,
+    "capture_level_TPR_at_5%_FPR": 0.5357,
+    "held_out_captures": {
+      "benign": 339,
+      "malware": 84
+    },
+    "note": "if capture-level AUC is clearly higher, the weak link is classifying ONE flow; classify the whole capture instead (src/models/train_capture_level.py)."
+  }
+}

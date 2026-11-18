@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Raw datasets - download separately
+datasets/**/*.csv
+datasets/**/*.zip
+datasets/**/*.pcap
+datasets/**/*.pcapng
+
+# Temporary files
+*.log
+*.tmp

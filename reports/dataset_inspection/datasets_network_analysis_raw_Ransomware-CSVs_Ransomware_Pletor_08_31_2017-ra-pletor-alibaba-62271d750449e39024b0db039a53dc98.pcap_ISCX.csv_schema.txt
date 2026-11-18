@@ -1,0 +1,288 @@
+Dataset: datasets/network_analysis/raw/Ransomware-CSVs/Ransomware/Pletor/08_31_2017-ra-pletor-alibaba-62271d750449e39024b0db039a53dc98.pcap_ISCX.csv
+Rows inspected: 378
+Columns: 85
+Shape inspected: (378, 85)
+
+COLUMN NAMES AND DATA TYPES:
+Flow ID                             str
+ Source IP                          str
+ Source Port                      int64
+ Destination IP                     str
+ Destination Port                 int64
+ Protocol                         int64
+ Timestamp                          str
+ Flow Duration                    int64
+ Total Fwd Packets                int64
+ Total Backward Packets           int64
+Total Length of Fwd Packets     float64
+ Total Length of Bwd Packets    float64
+ Fwd Packet Length Max          float64
+ Fwd Packet Length Min          float64
+ Fwd Packet Length Mean         float64
+ Fwd Packet Length Std          float64
+Bwd Packet Length Max           float64
+ Bwd Packet Length Min          float64
+ Bwd Packet Length Mean         float64
+ Bwd Packet Length Std          float64
+Flow Bytes/s                    float64
+ Flow Packets/s                 float64
+ Flow IAT Mean                  float64
+ Flow IAT Std                   float64
+ Flow IAT Max                   float64
+ Flow IAT Min                   float64
+Fwd IAT Total                   float64
+ Fwd IAT Mean                   float64
+ Fwd IAT Std                    float64
+ Fwd IAT Max                    float64
+ Fwd IAT Min                    float64
+Bwd IAT Total                   float64
+ Bwd IAT Mean                   float64
+ Bwd IAT Std                    float64
+ Bwd IAT Max                    float64
+ Bwd IAT Min                    float64
+Fwd PSH Flags                     int64
+ Bwd PSH Flags                    int64
+ Fwd URG Flags                    int64
+ Bwd URG Flags                    int64
+ Fwd Header Length                int64
+ Bwd Header Length                int64
+Fwd Packets/s                   float64
+ Bwd Packets/s                  float64
+ Min Packet Length              float64
+ Max Packet Length              float64
+ Packet Length Mean             float64
+ Packet Length Std              float64
+ Packet Length Variance         float64
+FIN Flag Count                    int64
+ SYN Flag Count                   int64
+ RST Flag Count                   int64
+ PSH Flag Count                   int64
+ ACK Flag Count                   int64
+ URG Flag Count                   int64
+ CWE Flag Count                   int64
+ ECE Flag Count                   int64
+ Down/Up Ratio                  float64
+ Average Packet Size            float64
+ Avg Fwd Segment Size           float64
+ Avg Bwd Segment Size           float64
+ Fwd Header Length.1              int64
+Fwd Avg Bytes/Bulk                int64
+ Fwd Avg Packets/Bulk             int64
+ Fwd Avg Bulk Rate                int64
+ Bwd Avg Bytes/Bulk               int64
+ Bwd Avg Packets/Bulk             int64
+Bwd Avg Bulk Rate                 int64
+Subflow Fwd Packets               int64
+ Subflow Fwd Bytes                int64
+ Subflow Bwd Packets              int64
+ Subflow Bwd Bytes                int64
+Init_Win_bytes_forward            int64
+ Init_Win_bytes_backward          int64
+ act_data_pkt_fwd                 int64
+ min_seg_size_forward             int64
+Active Mean                     float64
+ Active Std                     float64
+ Active Max                     float64
+ Active Min                     float64
+Idle Mean                       float64
+ Idle Std                       float64
+ Idle Max                       float64
+ Idle Min                       float64
+ Label                              str
+
+MISSING VALUES:
+Flow ID                         0
+ Source IP                      0
+ Source Port                    0
+ Destination IP                 0
+ Destination Port               0
+ Protocol                       0
+ Timestamp                      0
+ Flow Duration                  0
+ Total Fwd Packets              0
+ Total Backward Packets         0
+Total Length of Fwd Packets     0
+ Total Length of Bwd Packets    0
+ Fwd Packet Length Max          0
+ Fwd Packet Length Min          0
+ Fwd Packet Length Mean         0
+ Fwd Packet Length Std          0
+Bwd Packet Length Max           0
+ Bwd Packet Length Min          0
+ Bwd Packet Length Mean         0
+ Bwd Packet Length Std          0
+Flow Bytes/s                    0
+ Flow Packets/s                 0
+ Flow IAT Mean                  0
+ Flow IAT Std                   0
+ Flow IAT Max                   0
+ Flow IAT Min                   0
+Fwd IAT Total                   0
+ Fwd IAT Mean                   0
+ Fwd IAT Std                    0
+ Fwd IAT Max                    0
+ Fwd IAT Min                    0
+Bwd IAT Total                   0
+ Bwd IAT Mean                   0
+ Bwd IAT Std                    0
+ Bwd IAT Max                    0
+ Bwd IAT Min                    0
+Fwd PSH Flags                   0
+ Bwd PSH Flags                  0
+ Fwd URG Flags                  0
+ Bwd URG Flags                  0
+ Fwd Header Length              0
+ Bwd Header Length              0
+Fwd Packets/s                   0
+ Bwd Packets/s                  0
+ Min Packet Length              0
+ Max Packet Length              0
+ Packet Length Mean             0
+ Packet Length Std              0
+ Packet Length Variance         0
+FIN Flag Count                  0
+ SYN Flag Count                 0
+ RST Flag Count                 0
+ PSH Flag Count                 0
+ ACK Flag Count                 0
+ URG Flag Count                 0
+ CWE Flag Count                 0
+ ECE Flag Count                 0
+ Down/Up Ratio                  0
+ Average Packet Size            0
+ Avg Fwd Segment Size           0
+ Avg Bwd Segment Size           0
+ Fwd Header Length.1            0
+Fwd Avg Bytes/Bulk              0
+ Fwd Avg Packets/Bulk           0
+ Fwd Avg Bulk Rate              0
+ Bwd Avg Bytes/Bulk             0
+ Bwd Avg Packets/Bulk           0
+Bwd Avg Bulk Rate               0
+Subflow Fwd Packets             0
+ Subflow Fwd Bytes              0
+ Subflow Bwd Packets            0
+ Subflow Bwd Bytes              0
+Init_Win_bytes_forward          0
+ Init_Win_bytes_backward        0
+ act_data_pkt_fwd               0
+ min_seg_size_forward           0
+Active Mean                     0
+ Active Std                     0
+ Active Max                     0
+ Active Min                     0
+Idle Mean                       0
+ Idle Std                       0
+ Idle Max                       0
+ Idle Min                       0
+ Label                          0
+
+UNIQUE VALUES:
+Flow ID                         162
+ Source IP                       40
+ Source Port                    101
+ Destination IP                  54
+ Destination Port                95
+ Protocol                         3
+ Timestamp                      199
+ Flow Duration                  369
+ Total Fwd Packets               47
+ Total Backward Packets          47
+Total Length of Fwd Packets     105
+ Total Length of Bwd Packets    111
+ Fwd Packet Length Max           74
+ Fwd Packet Length Min           34
+ Fwd Packet Length Mean         105
+ Fwd Packet Length Std           77
+Bwd Packet Length Max            57
+ Bwd Packet Length Min           50
+ Bwd Packet Length Mean         112
+ Bwd Packet Length Std           65
+Flow Bytes/s                    195
+ Flow Packets/s                 369
+ Flow IAT Mean                  369
+ Flow IAT Std                   121
+ Flow IAT Max                   368
+ Flow IAT Min                   321
+Fwd IAT Total                   296
+ Fwd IAT Mean                   296
+ Fwd IAT Std                    114
+ Fwd IAT Max                    295
+ Fwd IAT Min                    271
+Bwd IAT Total                    75
+ Bwd IAT Mean                    75
+ Bwd IAT Std                     68
+ Bwd IAT Max                     75
+ Bwd IAT Min                     38
+Fwd PSH Flags                     2
+ Bwd PSH Flags                    1
+ Fwd URG Flags                    1
+ Bwd URG Flags                    1
+ Fwd Header Length               57
+ Bwd Header Length               60
+Fwd Packets/s                   371
+ Bwd Packets/s                  150
+ Min Packet Length               34
+ Max Packet Length               79
+ Packet Length Mean             132
+ Packet Length Std              114
+ Packet Length Variance         114
+FIN Flag Count                    1
+ SYN Flag Count                   2
+ RST Flag Count                   1
+ PSH Flag Count                   2
+ ACK Flag Count                   2
+ URG Flag Count                   2
+ CWE Flag Count                   1
+ ECE Flag Count                   1
+ Down/Up Ratio                    3
+ Average Packet Size            130
+ Avg Fwd Segment Size           105
+ Avg Bwd Segment Size           112
+ Fwd Header Length.1             57
+Fwd Avg Bytes/Bulk                1
+ Fwd Avg Packets/Bulk             1
+ Fwd Avg Bulk Rate                1
+ Bwd Avg Bytes/Bulk               1
+ Bwd Avg Packets/Bulk             1
+Bwd Avg Bulk Rate                 1
+Subflow Fwd Packets              47
+ Subflow Fwd Bytes              105
+ Subflow Bwd Packets             47
+ Subflow Bwd Bytes              111
+Init_Win_bytes_forward           46
+ Init_Win_bytes_backward         30
+ act_data_pkt_fwd                38
+ min_seg_size_forward             6
+Active Mean                      80
+ Active Std                      47
+ Active Max                      80
+ Active Min                      79
+Idle Mean                        80
+ Idle Std                        62
+ Idle Max                        79
+ Idle Min                        80
+ Label                            1
+
+NUMERIC STATISTICS:
+        Source Port   Destination Port    Protocol   Flow Duration   Total Fwd Packets   Total Backward Packets  Total Length of Fwd Packets   Total Length of Bwd Packets   Fwd Packet Length Max   Fwd Packet Length Min   Fwd Packet Length Mean   Fwd Packet Length Std  Bwd Packet Length Max   Bwd Packet Length Min   Bwd Packet Length Mean   Bwd Packet Length Std  Flow Bytes/s   Flow Packets/s   Flow IAT Mean   Flow IAT Std   Flow IAT Max   Flow IAT Min  Fwd IAT Total   Fwd IAT Mean   Fwd IAT Std   Fwd IAT Max   Fwd IAT Min  Bwd IAT Total   Bwd IAT Mean   Bwd IAT Std   Bwd IAT Max   Bwd IAT Min  Fwd PSH Flags   Bwd PSH Flags   Fwd URG Flags   Bwd URG Flags   Fwd Header Length   Bwd Header Length  Fwd Packets/s   Bwd Packets/s   Min Packet Length   Max Packet Length   Packet Length Mean   Packet Length Std   Packet Length Variance  FIN Flag Count   SYN Flag Count   RST Flag Count   PSH Flag Count   ACK Flag Count   URG Flag Count   CWE Flag Count   ECE Flag Count   Down/Up Ratio   Average Packet Size   Avg Fwd Segment Size   Avg Bwd Segment Size   Fwd Header Length.1  Fwd Avg Bytes/Bulk   Fwd Avg Packets/Bulk   Fwd Avg Bulk Rate   Bwd Avg Bytes/Bulk   Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets   Subflow Fwd Bytes   Subflow Bwd Packets   Subflow Bwd Bytes  Init_Win_bytes_forward   Init_Win_bytes_backward   act_data_pkt_fwd   min_seg_size_forward   Active Mean    Active Std    Active Max    Active Min     Idle Mean      Idle Std      Idle Max      Idle Min
+count    378.000000         378.000000  378.000000    3.780000e+02          378.000000               378.000000                   378.000000                  3.780000e+02              378.000000              378.000000               378.000000              378.000000             378.000000              378.000000               378.000000              378.000000  3.780000e+02       378.000000    3.780000e+02   3.780000e+02   3.780000e+02   3.780000e+02   3.780000e+02   3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02   3.780000e+02   3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02     378.000000           378.0           378.0           378.0          378.000000          378.000000     378.000000      378.000000          378.000000          378.000000           378.000000          378.000000             3.780000e+02           378.0       378.000000            378.0       378.000000       378.000000       378.000000            378.0            378.0      378.000000            378.000000             378.000000             378.000000            378.000000               378.0                  378.0               378.0                378.0                  378.0              378.0           378.000000          378.000000            378.000000        3.780000e+02              378.000000                378.000000         378.000000             378.000000  3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02  3.780000e+02
+mean   16550.412698       27247.484127    8.111111    1.870587e+07           25.066138                31.007937                 12282.751323                  2.095962e+04              660.992063               12.910053                79.197760               99.774567             230.362434               18.886243                93.215257               81.480759  2.274990e+05      4999.300606    3.393717e+06   1.967679e+06   7.599684e+06   2.140468e+06   1.741006e+07   3.373212e+06  1.796343e+06  6.505909e+06  2.135331e+06   8.412098e+06   2.680144e+05  5.476438e+05  2.080314e+06  4.537828e+04       0.148148             0.0             0.0             0.0          790.666667          993.291005    4475.598361      523.702244           11.060847          708.880952            89.814464          108.038740             6.545550e+04             0.0         0.148148              0.0         0.084656         0.637566         0.497354              0.0              0.0        0.367725            101.601402              79.197760              93.215257            790.666667                 0.0                    0.0                 0.0                  0.0                    0.0                0.0            25.066138        12282.751323             31.007937        2.095962e+04             5993.317460                242.640212          13.293651              30.306878  1.361968e+06  7.602153e+05  2.285705e+06  6.778415e+05  4.627415e+06  7.179109e+05  5.311528e+06  4.034940e+06
+std    20827.655897       21611.004371    4.949435    3.594665e+07          111.971190               177.843007                 54544.290904                  1.831517e+05             2340.391294               27.238846               173.724068              269.073789             485.411574               51.919089               198.418654              187.038842  1.730802e+06     21829.659977    6.186770e+06   5.510687e+06   1.395282e+07   5.438113e+06   3.507114e+07   6.194434e+06  5.234080e+06  1.128189e+07  5.441001e+06   2.851219e+07   1.429523e+06  3.028767e+06  9.498079e+06  6.281204e+05       0.355718             0.0             0.0             0.0         3592.032232         5692.597524   20425.912200     4599.511867           24.711041         2340.689705           168.363398          232.219264             2.098309e+05             0.0         0.355718              0.0         0.278738         0.481340         0.500656              0.0              0.0        0.617787            177.134692             173.724068             198.418654           3592.032232                 0.0                    0.0                 0.0                  0.0                    0.0                0.0           111.971190        54544.290904            177.843007        1.831517e+05            18185.823631                937.553257          54.603330               7.675861  5.114607e+06  3.601721e+06  8.392993e+06  3.400657e+06  1.266906e+07  2.875566e+06  1.372823e+07  1.211962e+07
+min        0.000000           0.000000    0.000000    9.000000e+00            1.000000                 0.000000                     0.000000                  0.000000e+00                0.000000                0.000000                 0.000000                0.000000               0.000000                0.000000                 0.000000                0.000000  0.000000e+00         0.062925    9.000000e+00   0.000000e+00   9.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0            0.000000            0.000000       0.016659        0.000000            0.000000            0.000000             0.000000            0.000000             0.000000e+00             0.0         0.000000              0.0         0.000000         0.000000         0.000000              0.0              0.0        0.000000              0.000000               0.000000               0.000000              0.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             1.000000            0.000000              0.000000        0.000000e+00               -1.000000                 -1.000000           0.000000               0.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+25%      443.000000         443.000000    6.000000    1.729002e+05            2.000000                 0.000000                     0.000000                  0.000000e+00                0.000000                0.000000                 0.000000                0.000000               0.000000                0.000000                 0.000000                0.000000  0.000000e+00         0.397476    6.616150e+04   0.000000e+00   1.207890e+05   1.329750e+03   4.607500e+02   4.607500e+02  0.000000e+00  4.607500e+02  9.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0           40.000000            0.000000       0.303084        0.000000            0.000000            0.000000             0.000000            0.000000             0.000000e+00             0.0         0.000000              0.0         0.000000         0.000000         0.000000              0.0              0.0        0.000000              0.000000               0.000000               0.000000             40.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             2.000000            0.000000              0.000000        0.000000e+00               -1.000000                 -1.000000           0.000000              32.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+50%      443.000000       36824.500000    6.000000    1.156988e+06            2.000000                 0.000000                    30.500000                  0.000000e+00               18.000000                0.000000                16.000000                0.000000               0.000000                0.000000                 0.000000                0.000000  7.026409e+00         4.105791    4.505952e+05   0.000000e+00   9.803155e+05   2.264680e+05   8.015455e+05   4.810345e+05  0.000000e+00  5.448990e+05  1.060820e+05   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0           64.000000            0.000000       3.871008        0.000000            0.000000           26.000000            20.666667            0.000000             0.000000e+00             0.0         0.000000              0.0         0.000000         1.000000         0.000000              0.0              0.0        0.000000             27.400000              16.000000               0.000000             64.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             2.000000           30.500000              0.000000        0.000000e+00              176.000000                 -1.000000           0.000000              32.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+75%    41144.000000       44925.000000    6.000000    1.135620e+07            4.750000                 1.000000                   114.000000                  1.132500e+02               55.000000               23.000000                48.125000               18.333333             104.000000                0.000000                94.000000                0.000000  2.464587e+03        25.961902    4.454099e+06   1.384344e+05   8.193872e+06   1.186774e+06   8.024068e+06   4.386033e+06  6.190497e+04  7.959858e+06  1.203326e+06   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0           64.000000           32.000000      13.448616        5.317994           18.000000          134.750000            64.538043           54.848276             3.008333e+03             0.0         0.000000              0.0         0.000000         1.000000         1.000000              0.0              0.0        1.000000             94.625000              48.125000              94.000000             64.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             4.750000          114.000000              1.000000        1.132500e+02              327.750000                 -1.000000           1.000000              32.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+max    61900.000000       60952.000000   17.000000    1.199920e+08         1484.000000              2686.000000                474055.000000                  3.133374e+06            13032.000000              315.000000              1332.866667             2319.032183            1448.000000              446.000000              1348.159091              670.937370  3.000000e+07    222222.222222    2.995227e+07   3.464129e+07   1.184575e+08   2.995227e+07   1.199920e+08   2.995227e+07  3.464129e+07  6.000050e+07  2.995227e+07   1.198932e+08   1.418689e+07  3.744055e+07  1.184597e+08  1.204615e+07       1.000000             0.0             0.0             0.0        47596.000000        85976.000000  222222.222222    47619.047619          315.000000        13032.000000           860.919444         1667.398259             2.780217e+06             0.0         1.000000              0.0         1.000000         1.000000         1.000000              0.0              0.0        8.000000           1086.000000            1332.866667            1348.159091          47596.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0          1484.000000       474055.000000           2686.000000        3.133374e+06            65535.000000               8170.000000         511.000000              44.000000  5.707035e+07  3.114499e+07  5.707035e+07  5.707035e+07  1.184575e+08  4.179890e+07  1.184575e+08  1.184575e+08
+
+SAMPLE ROWS:
+                                 Flow ID       Source IP   Source Port  Destination IP   Destination Port   Protocol            Timestamp   Flow Duration   Total Fwd Packets   Total Backward Packets  Total Length of Fwd Packets   Total Length of Bwd Packets   Fwd Packet Length Max   Fwd Packet Length Min   Fwd Packet Length Mean   Fwd Packet Length Std  Bwd Packet Length Max   Bwd Packet Length Min   Bwd Packet Length Mean   Bwd Packet Length Std  Flow Bytes/s   Flow Packets/s   Flow IAT Mean   Flow IAT Std   Flow IAT Max   Flow IAT Min  Fwd IAT Total   Fwd IAT Mean   Fwd IAT Std   Fwd IAT Max   Fwd IAT Min  Bwd IAT Total   Bwd IAT Mean   Bwd IAT Std   Bwd IAT Max   Bwd IAT Min  Fwd PSH Flags   Bwd PSH Flags   Fwd URG Flags   Bwd URG Flags   Fwd Header Length   Bwd Header Length  Fwd Packets/s   Bwd Packets/s   Min Packet Length   Max Packet Length   Packet Length Mean   Packet Length Std   Packet Length Variance  FIN Flag Count   SYN Flag Count   RST Flag Count   PSH Flag Count   ACK Flag Count   URG Flag Count   CWE Flag Count   ECE Flag Count   Down/Up Ratio   Average Packet Size   Avg Fwd Segment Size   Avg Bwd Segment Size   Fwd Header Length.1  Fwd Avg Bytes/Bulk   Fwd Avg Packets/Bulk   Fwd Avg Bulk Rate   Bwd Avg Bytes/Bulk   Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets   Subflow Fwd Bytes   Subflow Bwd Packets   Subflow Bwd Bytes  Init_Win_bytes_forward   Init_Win_bytes_backward   act_data_pkt_fwd   min_seg_size_forward  Active Mean   Active Std   Active Max   Active Min  Idle Mean   Idle Std   Idle Max   Idle Min              Label
+0  169.45.248.119-10.42.0.42-443-48041-6  169.45.248.119           443      10.42.0.42              48041          6  31/08/2017 01:23:42            1159                   2                        0                         57.0                           0.0                    57.0                     0.0                     28.5               40.305087                    0.0                     0.0                      0.0                     0.0  49180.327869      1725.625539          1159.0            0.0         1159.0         1159.0         1159.0         1159.0           0.0        1159.0        1159.0            0.0            0.0           0.0           0.0           0.0              1               0               0               0                  64                   0    1725.625539             0.0                 0.0                57.0                 38.0           32.908965                   1083.0               0                1                0                0                1                0                0                0             0.0                  57.0                   28.5                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                  57                     0                   0                     514                        -1                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  RANSOMWARE_PLETOR
+1  169.45.248.119-10.42.0.42-443-48041-6  169.45.248.119           443      10.42.0.42              48041          6  31/08/2017 01:23:42          403888                   2                        0                        114.0                           0.0                    57.0                    57.0                     57.0                0.000000                    0.0                     0.0                      0.0                     0.0    282.256467         4.951868        403888.0            0.0       403888.0       403888.0       403888.0       403888.0           0.0      403888.0      403888.0            0.0            0.0           0.0           0.0           0.0              1               0               0               0                  64                   0       4.951868             0.0                57.0                57.0                 57.0            0.000000                      0.0               0                1                0                0                1                1                0                0             0.0                  85.5                   57.0                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                 114                     0                   0                     514                        -1                  1                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  RANSOMWARE_PLETOR
+2  169.45.248.119-10.42.0.42-443-48041-6  169.45.248.119           443      10.42.0.42              48041          6  31/08/2017 01:23:43         1015936                   2                        0                        114.0                           0.0                    57.0                    57.0                     57.0                0.000000                    0.0                     0.0                      0.0                     0.0    112.211793         1.968628       1015936.0            0.0      1015936.0      1015936.0      1015936.0      1015936.0           0.0     1015936.0     1015936.0            0.0            0.0           0.0           0.0           0.0              1               0               0               0                  64                   0       1.968628             0.0                57.0                57.0                 57.0            0.000000                      0.0               0                1                0                0                1                1                0                0             0.0                  85.5                   57.0                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                 114                     0                   0                     514                        -1                  1                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  RANSOMWARE_PLETOR
+3  169.45.248.119-10.42.0.42-443-48041-6  169.45.248.119           443      10.42.0.42              48041          6  31/08/2017 01:23:46         2279994                   2                        0                        114.0                           0.0                    57.0                    57.0                     57.0                0.000000                    0.0                     0.0                      0.0                     0.0     50.000132         0.877195       2279994.0            0.0      2279994.0      2279994.0      2279994.0      2279994.0           0.0     2279994.0     2279994.0            0.0            0.0           0.0           0.0           0.0              1               0               0               0                  64                   0       0.877195             0.0                57.0                57.0                 57.0            0.000000                      0.0               0                1                0                0                1                1                0                0             0.0                  85.5                   57.0                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                 114                     0                   0                     514                        -1                  1                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  RANSOMWARE_PLETOR
+4  169.45.248.119-10.42.0.42-443-48041-6  169.45.248.119           443      10.42.0.42              48041          6  31/08/2017 01:23:53         8519913                   2                        0                        114.0                           0.0                    57.0                    57.0                     57.0                0.000000                    0.0                     0.0                      0.0                     0.0     13.380418         0.234744       8519913.0            0.0      8519913.0      8519913.0      8519913.0      8519913.0           0.0     8519913.0     8519913.0            0.0            0.0           0.0           0.0           0.0              1               0               0               0                  64                   0       0.234744             0.0                57.0                57.0                 57.0            0.000000                      0.0               0                1                0                0                1                1                0                0             0.0                  85.5                   57.0                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                 114                     0                   0                     514                        -1                  1                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  RANSOMWARE_PLETOR
+
+DISTRIBUTION OF  Label:
+ Label
+RANSOMWARE_PLETOR    378

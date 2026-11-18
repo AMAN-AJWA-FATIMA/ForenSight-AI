@@ -1,0 +1,12 @@
+<section class="view" id="view-dashboard">
+  <div class="kpi-row" id="kpis"></div>
+  <div class="seg" role="group" aria-label="Choose what to show"><button data-show="summary">Summary</button><button data-show="charts">Charts</button><button data-show="analyses">Analyses</button><button data-show="all">Show all</button></div>
+  <div class="flow">
+    <div class="card wide" data-panel="summary charts"><div class="card-head"><h3>Detection curve (ROC)</h3><span class="pill" id="roc-note"></span></div><div class="chart"><canvas id="c-roc"></canvas></div></div>
+    <div class="card" data-panel="summary"><h3>Quick insights</h3><ul class="insights" id="insights"></ul></div>
+    <div class="card" data-panel="charts"><h3>Samples by class</h3><div class="chart"><canvas id="c-donut"></canvas></div></div>
+    <div class="card" data-panel="charts"><h3>Top 5 features</h3><p class="muted">What the model relies on most</p><div id="top-features"></div></div>
+    <div class="card" data-panel="charts"><h3>Model comparison</h3><div class="chart"><canvas id="c-compare"></canvas></div></div>
+    <div class="card full" data-panel="analyses"><div class="card-head"><h3>Recent analyses</h3><span class="muted">Held-out test records scored live. Click one for details.</span></div><div class="table-wrap" id="recent"></div></div>
+  </div>
+</section>

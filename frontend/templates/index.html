@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · ForenSight-AI</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo.svg') }}">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('fs-theme') || 'light'; } catch (e) {}</script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/motion.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="app fx-up">
+  {% include "partials/sidebar.html" %}
+  <main class="content">
+    <header class="banner-card">
+      <img class="banner-logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="52" height="52">
+      <div class="banner-text">
+        <span class="banner-eyebrow">Analyst dashboard</span>
+        <h1>ForenSight-AI</h1>
+        <p>A Machine Learning-Based System for Android Malware Detection</p>
+      </div>
+      <div class="exp-switch" role="tablist" aria-label="Evidence type">
+        <button class="exp-btn on" data-exp="static" role="tab">Static analysis</button>
+        <button class="exp-btn" data-exp="network" role="tab">Network analysis</button>
+      </div>
+    </header>
+    <div id="alert" class="alert" hidden></div>
+    {% include "partials/dashboard.html" %}
+    {% include "partials/data.html" %}
+    {% include "partials/models.html" %}
+    {% include "partials/explain.html" %}
+    {% include "partials/detect.html" %}
+  </main>
+</div>
+<script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+{% for f in ['core', 'ui', 'dashboard', 'data', 'models', 'explain', 'detect', 'app'] %}
+<script src="{{ url_for('static', filename='js/' + f + '.js') }}"></script>
+{% endfor %}
+</body>
+</html>

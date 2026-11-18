@@ -1,0 +1,45 @@
+{
+  "task": "capture-level (one row per capture file); NOT comparable to the flow-level experiment",
+  "n_captures": 2126,
+  "n_features": 261,
+  "skipped": {
+    "no_label": 0,
+    "too_few_flows": 0
+  },
+  "n_train": 1700,
+  "n_test": 426,
+  "cv_f1_train": {
+    "Logistic Regression": {
+      "mean": 0.9383575250063577,
+      "std": 0.020042654155642763
+    },
+    "Random Forest": {
+      "mean": 0.9617296863276504,
+      "std": 0.02164365739567415
+    },
+    "Hist Gradient Boosting": {
+      "mean": 0.9663583099329013,
+      "std": 0.015416929298648742
+    }
+  },
+  "chosen": "Hist Gradient Boosting",
+  "test": {
+    "accuracy": 0.9859154929577465,
+    "precision": 0.9438202247191011,
+    "recall": 0.9882352941176471,
+    "f1": 0.9655172413793104,
+    "false_positive_rate": 0.01466275659824047,
+    "specificity": 0.9853372434017595,
+    "false_negative_rate": 0.011764705882352941,
+    "roc_auc": 0.9988269794721407,
+    "pr_auc": 0.9957498717281207
+  },
+  "confusion": {
+    "tn": 336,
+    "fp": 5,
+    "fn": 1,
+    "tp": 84
+  },
+  "top_features": [],
+  "seconds": 89.5
+}

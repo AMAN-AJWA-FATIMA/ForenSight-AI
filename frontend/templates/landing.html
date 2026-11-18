@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ForenSight-AI</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/motion.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+<main class="splash">
+  <div class="radar fx-up" style="--i:0" aria-hidden="true"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="96" height="96"></div>
+  <h1 class="fx-up" style="--i:2">ForenSight-AI</b></h1>
+  <p class="tag fx-up" style="--i:4"><span id="l1">Malware leaves tells.</span><br><span id="l2">ForenSight-AI shows which ones moved the score.</span><i class="caret"></i></p>
+  <a class="go" id="go" href="{{ url_for('main.dashboard') }}">Enter dashboard</a>
+  <div class="bar" id="bar" aria-hidden="true"><i></i></div>
+</main>
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

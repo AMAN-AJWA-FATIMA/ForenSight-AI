@@ -1,0 +1,62 @@
+Dataset: reports/model_comparison_network.csv
+Rows inspected: 8
+Columns: 11
+Shape inspected: (8, 11)
+
+COLUMN NAMES AND DATA TYPES:
+model                      str
+version                    str
+accuracy               float64
+precision              float64
+recall                 float64
+f1                     float64
+false_positive_rate    float64
+roc_auc                float64
+pr_auc                 float64
+threshold              float64
+chosen                     str
+
+MISSING VALUES:
+model                  0
+version                0
+accuracy               0
+precision              0
+recall                 0
+f1                     0
+false_positive_rate    0
+roc_auc                0
+pr_auc                 0
+threshold              4
+chosen                 7
+
+UNIQUE VALUES:
+model                  4
+version                2
+accuracy               8
+precision              8
+recall                 8
+f1                     8
+false_positive_rate    8
+roc_auc                8
+pr_auc                 8
+threshold              4
+chosen                 1
+
+NUMERIC STATISTICS:
+       accuracy  precision    recall        f1  false_positive_rate   roc_auc    pr_auc  threshold
+count  8.000000   8.000000  8.000000  8.000000             8.000000  8.000000  8.000000   4.000000
+mean   0.548455   0.280389  0.630876  0.355664             0.472180  0.633774  0.329037   0.460000
+std    0.136291   0.091526  0.203324  0.027532             0.219340  0.043633  0.054050   0.029439
+min    0.354359   0.213946  0.226406  0.311680             0.056683  0.568020  0.247738   0.420000
+25%    0.470190   0.236155  0.556721  0.336844             0.396279  0.609987  0.301199   0.450000
+50%    0.562441   0.251884  0.629092  0.361301             0.447385  0.652142  0.348816   0.465000
+75%    0.597054   0.274932  0.767568  0.376226             0.606941  0.668112  0.368623   0.475000
+max    0.799769   0.500000  0.874685  0.386892             0.765192  0.669350  0.380760   0.490000
+
+SAMPLE ROWS:
+                 model   version  accuracy  precision    recall        f1  false_positive_rate   roc_auc    pr_auc  threshold chosen
+0  Logistic Regression  baseline  0.544313   0.231758  0.551145  0.326305             0.457398  0.568411  0.248199        NaN    NaN
+1  Logistic Regression     tuned  0.354359   0.213946  0.831874  0.340358             0.765192  0.568020  0.247738       0.46    NaN
+2        Random Forest  baseline  0.799769   0.500000  0.226406  0.311680             0.056683  0.668195  0.380760        NaN    NaN
+3        Random Forest     tuned  0.412995   0.237621  0.874685  0.373716             0.702594  0.668085  0.363893       0.42    NaN
+4    Gradient Boosting  baseline  0.590919   0.258577  0.558580  0.353508             0.400985  0.623845  0.318866        NaN    NaN

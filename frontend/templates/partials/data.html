@@ -1,0 +1,9 @@
+<section class="view" id="view-data">
+  <div class="kpi-row" id="prep-kpis"></div>
+  <div class="seg" role="group" aria-label="Choose what to show"><button data-show="pipeline">Pipeline</button><button data-show="preview">Data preview</button><button data-show="analysis">Analysis</button><button data-show="all">Show all</button></div>
+  <div class="card" data-panel="pipeline"><h3>How the raw data becomes model input</h3><div class="steps" id="steps"></div></div>
+  <div class="flow">
+    <div class="card" data-panel="preview"><div class="card-head"><h3>Data preview</h3><div class="tabs small" id="preview-tabs"><button data-tab="raw" class="on">Raw</button><button data-tab="processed">Processed</button></div></div><p class="muted" id="preview-note"></p><div class="table-wrap" id="preview"></div></div>
+    <div class="card" id="eda-card" data-panel="analysis"><h3 id="eda-title"></h3><p class="muted" id="eda-sub"></p><div id="eda-body"></div></div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<section class="view" id="view-detect">
+  <div class="row two">
+    <div class="card">
+      <div class="tabs" id="detect-tabs"><button data-tab="record" class="on">Test record</button><button data-tab="form">Enter features</button><button data-tab="csv">Upload CSV</button></div>
+      <div class="pane on" id="pane-record"><p class="muted">Real records the model never saw during training or tuning. The true label is shown after the analysis.</p><div class="row-inline" id="picker"></div></div>
+      <div class="pane" id="pane-form"><p class="muted" id="form-help"></p>
+        <form id="feature-form" novalidate><div class="form-grid" id="feature-inputs"></div><div class="row-inline"><button class="btn" type="submit">Analyse</button><button class="btn ghost" type="button" id="form-reset">Reset</button></div></form></div>
+      <div class="pane" id="pane-csv"><p class="muted">Columns must match the training features. Maximum 5,000 rows.</p>
+        <form id="csv-form" novalidate><div class="row-inline"><input type="file" id="csv-file" accept=".csv"><button class="btn" type="submit">Analyse CSV</button></div></form></div>
+    </div>
+    <div class="card"><h3>Result</h3><div id="detect-result"><p class="muted">Run an analysis to see the verdict and the features behind it.</p></div></div>
+  </div>
+</section>

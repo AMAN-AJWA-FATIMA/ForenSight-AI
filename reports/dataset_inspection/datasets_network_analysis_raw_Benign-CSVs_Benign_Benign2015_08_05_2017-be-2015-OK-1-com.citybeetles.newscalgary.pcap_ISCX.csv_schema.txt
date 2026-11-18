@@ -1,0 +1,288 @@
+Dataset: datasets/network_analysis/raw/Benign-CSVs/Benign/Benign2015/08_05_2017-be-2015-OK-1-com.citybeetles.newscalgary.pcap_ISCX.csv
+Rows inspected: 627
+Columns: 85
+Shape inspected: (627, 85)
+
+COLUMN NAMES AND DATA TYPES:
+Flow ID                             str
+ Source IP                          str
+ Source Port                      int64
+ Destination IP                     str
+ Destination Port                 int64
+ Protocol                         int64
+ Timestamp                          str
+ Flow Duration                    int64
+ Total Fwd Packets                int64
+ Total Backward Packets           int64
+Total Length of Fwd Packets     float64
+ Total Length of Bwd Packets    float64
+ Fwd Packet Length Max          float64
+ Fwd Packet Length Min          float64
+ Fwd Packet Length Mean         float64
+ Fwd Packet Length Std          float64
+Bwd Packet Length Max           float64
+ Bwd Packet Length Min          float64
+ Bwd Packet Length Mean         float64
+ Bwd Packet Length Std          float64
+Flow Bytes/s                    float64
+ Flow Packets/s                 float64
+ Flow IAT Mean                  float64
+ Flow IAT Std                   float64
+ Flow IAT Max                   float64
+ Flow IAT Min                   float64
+Fwd IAT Total                   float64
+ Fwd IAT Mean                   float64
+ Fwd IAT Std                    float64
+ Fwd IAT Max                    float64
+ Fwd IAT Min                    float64
+Bwd IAT Total                   float64
+ Bwd IAT Mean                   float64
+ Bwd IAT Std                    float64
+ Bwd IAT Max                    float64
+ Bwd IAT Min                    float64
+Fwd PSH Flags                     int64
+ Bwd PSH Flags                    int64
+ Fwd URG Flags                    int64
+ Bwd URG Flags                    int64
+ Fwd Header Length                int64
+ Bwd Header Length                int64
+Fwd Packets/s                   float64
+ Bwd Packets/s                  float64
+ Min Packet Length              float64
+ Max Packet Length              float64
+ Packet Length Mean             float64
+ Packet Length Std              float64
+ Packet Length Variance         float64
+FIN Flag Count                    int64
+ SYN Flag Count                   int64
+ RST Flag Count                   int64
+ PSH Flag Count                   int64
+ ACK Flag Count                   int64
+ URG Flag Count                   int64
+ CWE Flag Count                   int64
+ ECE Flag Count                   int64
+ Down/Up Ratio                  float64
+ Average Packet Size            float64
+ Avg Fwd Segment Size           float64
+ Avg Bwd Segment Size           float64
+ Fwd Header Length.1              int64
+Fwd Avg Bytes/Bulk                int64
+ Fwd Avg Packets/Bulk             int64
+ Fwd Avg Bulk Rate                int64
+ Bwd Avg Bytes/Bulk               int64
+ Bwd Avg Packets/Bulk             int64
+Bwd Avg Bulk Rate                 int64
+Subflow Fwd Packets               int64
+ Subflow Fwd Bytes                int64
+ Subflow Bwd Packets              int64
+ Subflow Bwd Bytes                int64
+Init_Win_bytes_forward            int64
+ Init_Win_bytes_backward          int64
+ act_data_pkt_fwd                 int64
+ min_seg_size_forward             int64
+Active Mean                     float64
+ Active Std                     float64
+ Active Max                     float64
+ Active Min                     float64
+Idle Mean                       float64
+ Idle Std                       float64
+ Idle Max                       float64
+ Idle Min                       float64
+ Label                              str
+
+MISSING VALUES:
+Flow ID                         0
+ Source IP                      0
+ Source Port                    0
+ Destination IP                 0
+ Destination Port               0
+ Protocol                       0
+ Timestamp                      0
+ Flow Duration                  0
+ Total Fwd Packets              0
+ Total Backward Packets         0
+Total Length of Fwd Packets     0
+ Total Length of Bwd Packets    0
+ Fwd Packet Length Max          0
+ Fwd Packet Length Min          0
+ Fwd Packet Length Mean         0
+ Fwd Packet Length Std          0
+Bwd Packet Length Max           0
+ Bwd Packet Length Min          0
+ Bwd Packet Length Mean         0
+ Bwd Packet Length Std          0
+Flow Bytes/s                    0
+ Flow Packets/s                 0
+ Flow IAT Mean                  0
+ Flow IAT Std                   0
+ Flow IAT Max                   0
+ Flow IAT Min                   0
+Fwd IAT Total                   0
+ Fwd IAT Mean                   0
+ Fwd IAT Std                    0
+ Fwd IAT Max                    0
+ Fwd IAT Min                    0
+Bwd IAT Total                   0
+ Bwd IAT Mean                   0
+ Bwd IAT Std                    0
+ Bwd IAT Max                    0
+ Bwd IAT Min                    0
+Fwd PSH Flags                   0
+ Bwd PSH Flags                  0
+ Fwd URG Flags                  0
+ Bwd URG Flags                  0
+ Fwd Header Length              0
+ Bwd Header Length              0
+Fwd Packets/s                   0
+ Bwd Packets/s                  0
+ Min Packet Length              0
+ Max Packet Length              0
+ Packet Length Mean             0
+ Packet Length Std              0
+ Packet Length Variance         0
+FIN Flag Count                  0
+ SYN Flag Count                 0
+ RST Flag Count                 0
+ PSH Flag Count                 0
+ ACK Flag Count                 0
+ URG Flag Count                 0
+ CWE Flag Count                 0
+ ECE Flag Count                 0
+ Down/Up Ratio                  0
+ Average Packet Size            0
+ Avg Fwd Segment Size           0
+ Avg Bwd Segment Size           0
+ Fwd Header Length.1            0
+Fwd Avg Bytes/Bulk              0
+ Fwd Avg Packets/Bulk           0
+ Fwd Avg Bulk Rate              0
+ Bwd Avg Bytes/Bulk             0
+ Bwd Avg Packets/Bulk           0
+Bwd Avg Bulk Rate               0
+Subflow Fwd Packets             0
+ Subflow Fwd Bytes              0
+ Subflow Bwd Packets            0
+ Subflow Bwd Bytes              0
+Init_Win_bytes_forward          0
+ Init_Win_bytes_backward        0
+ act_data_pkt_fwd               0
+ min_seg_size_forward           0
+Active Mean                     0
+ Active Std                     0
+ Active Max                     0
+ Active Min                     0
+Idle Mean                       0
+ Idle Std                       0
+ Idle Max                       0
+ Idle Min                       0
+ Label                          0
+
+UNIQUE VALUES:
+Flow ID                         314
+ Source IP                       47
+ Source Port                    290
+ Destination IP                  67
+ Destination Port               110
+ Protocol                         3
+ Timestamp                      178
+ Flow Duration                  607
+ Total Fwd Packets               42
+ Total Backward Packets          51
+Total Length of Fwd Packets     166
+ Total Length of Bwd Packets    199
+ Fwd Packet Length Max          135
+ Fwd Packet Length Min           27
+ Fwd Packet Length Mean         179
+ Fwd Packet Length Std          155
+Bwd Packet Length Max           102
+ Bwd Packet Length Min           63
+ Bwd Packet Length Mean         207
+ Bwd Packet Length Std          149
+Flow Bytes/s                    327
+ Flow Packets/s                 607
+ Flow IAT Mean                  607
+ Flow IAT Std                   293
+ Flow IAT Max                   607
+ Flow IAT Min                   476
+Fwd IAT Total                   397
+ Fwd IAT Mean                   397
+ Fwd IAT Std                    233
+ Fwd IAT Max                    397
+ Fwd IAT Min                    352
+Bwd IAT Total                   226
+ Bwd IAT Mean                   226
+ Bwd IAT Std                    189
+ Bwd IAT Max                    226
+ Bwd IAT Min                    121
+Fwd PSH Flags                     2
+ Bwd PSH Flags                    1
+ Fwd URG Flags                    1
+ Bwd URG Flags                    1
+ Fwd Header Length               84
+ Bwd Header Length               96
+Fwd Packets/s                   610
+ Bwd Packets/s                  426
+ Min Packet Length               24
+ Max Packet Length              103
+ Packet Length Mean             235
+ Packet Length Std              214
+ Packet Length Variance         214
+FIN Flag Count                    2
+ SYN Flag Count                   2
+ RST Flag Count                   1
+ PSH Flag Count                   2
+ ACK Flag Count                   2
+ URG Flag Count                   2
+ CWE Flag Count                   1
+ ECE Flag Count                   1
+ Down/Up Ratio                    5
+ Average Packet Size            231
+ Avg Fwd Segment Size           178
+ Avg Bwd Segment Size           207
+ Fwd Header Length.1             84
+Fwd Avg Bytes/Bulk                1
+ Fwd Avg Packets/Bulk             1
+ Fwd Avg Bulk Rate                1
+ Bwd Avg Bytes/Bulk               1
+ Bwd Avg Packets/Bulk             1
+Bwd Avg Bulk Rate                 1
+Subflow Fwd Packets              42
+ Subflow Fwd Bytes              166
+ Subflow Bwd Packets             51
+ Subflow Bwd Bytes              199
+Init_Win_bytes_forward          144
+ Init_Win_bytes_backward        156
+ act_data_pkt_fwd                19
+ min_seg_size_forward             6
+Active Mean                      70
+ Active Std                       8
+ Active Max                      70
+ Active Min                      70
+Idle Mean                        76
+ Idle Std                        15
+ Idle Max                        76
+ Idle Min                        76
+ Label                            1
+
+NUMERIC STATISTICS:
+        Source Port   Destination Port    Protocol   Flow Duration   Total Fwd Packets   Total Backward Packets  Total Length of Fwd Packets   Total Length of Bwd Packets   Fwd Packet Length Max   Fwd Packet Length Min   Fwd Packet Length Mean   Fwd Packet Length Std  Bwd Packet Length Max   Bwd Packet Length Min   Bwd Packet Length Mean   Bwd Packet Length Std  Flow Bytes/s   Flow Packets/s   Flow IAT Mean   Flow IAT Std   Flow IAT Max   Flow IAT Min  Fwd IAT Total   Fwd IAT Mean   Fwd IAT Std   Fwd IAT Max   Fwd IAT Min  Bwd IAT Total   Bwd IAT Mean   Bwd IAT Std   Bwd IAT Max   Bwd IAT Min  Fwd PSH Flags   Bwd PSH Flags   Fwd URG Flags   Bwd URG Flags   Fwd Header Length   Bwd Header Length  Fwd Packets/s   Bwd Packets/s   Min Packet Length   Max Packet Length   Packet Length Mean   Packet Length Std   Packet Length Variance  FIN Flag Count   SYN Flag Count   RST Flag Count   PSH Flag Count   ACK Flag Count   URG Flag Count   CWE Flag Count   ECE Flag Count   Down/Up Ratio   Average Packet Size   Avg Fwd Segment Size   Avg Bwd Segment Size   Fwd Header Length.1  Fwd Avg Bytes/Bulk   Fwd Avg Packets/Bulk   Fwd Avg Bulk Rate   Bwd Avg Bytes/Bulk   Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets   Subflow Fwd Bytes   Subflow Bwd Packets   Subflow Bwd Bytes  Init_Win_bytes_forward   Init_Win_bytes_backward   act_data_pkt_fwd   min_seg_size_forward   Active Mean    Active Std    Active Max    Active Min     Idle Mean      Idle Std      Idle Max      Idle Min
+count    627.000000         627.000000  627.000000    6.270000e+02          627.000000               627.000000                   627.000000                    627.000000              627.000000              627.000000               627.000000              627.000000             627.000000              627.000000               627.000000              627.000000  6.270000e+02       627.000000    6.270000e+02   6.270000e+02   6.270000e+02   6.270000e+02   6.270000e+02   6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02   6.270000e+02   6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02     627.000000           627.0           627.0           627.0          627.000000          627.000000     627.000000      627.000000          627.000000          627.000000           627.000000          627.000000               627.000000      627.000000       627.000000            627.0       627.000000       627.000000       627.000000            627.0            627.0       627.00000            627.000000             627.000000             627.000000            627.000000               627.0                  627.0               627.0                627.0                  627.0              627.0           627.000000          627.000000            627.000000          627.000000              627.000000                627.000000         627.000000             627.000000  6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02  6.270000e+02
+mean   36950.918660        9206.078150    7.478469    1.025201e+07            6.055821                 6.776715                   635.325359                   5950.192982              183.145136                7.562998                44.382446               62.523781             300.438596               17.271132               154.987091              115.013189  7.020210e+04      5092.739656    2.467662e+06   2.109147e+06   8.695347e+06   1.564146e+06   6.589440e+06   2.520936e+06  1.417193e+06  5.162754e+06  1.738794e+06   6.048548e+06   9.862878e+05  1.505241e+06  5.114834e+06  3.645644e+05       0.110048             0.0             0.0             0.0          170.022329          193.824561    3730.161402     1362.578255            5.132376          337.017544           102.377952          127.870284             62670.461045        0.025518         0.110048              0.0         0.290271         0.537480         0.282297              0.0              0.0         0.61882            111.293122              44.382446             154.987091            170.022329                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             6.055821          635.325359              6.776715         5950.192982            22073.373206               2181.558214           1.349282              26.060606  1.496396e+05  1.498622e+04  1.656095e+05  1.391892e+05  4.217852e+06  1.574052e+05  4.396750e+06  4.082686e+06
+std    20225.176721       19098.641259    3.861926    2.111633e+07           14.475883                25.211145                  3696.387269                  33553.301716              330.812191               19.156755                91.409016              120.667256             539.813600               52.992373               303.384421              223.983187  2.918967e+05     18885.620620    6.151046e+06   4.975789e+06   1.704870e+07   5.736650e+06   1.626047e+07   6.914887e+06  3.583550e+06  1.095139e+07  6.623939e+06   1.919920e+07   4.675171e+06  5.788275e+06  1.634778e+07  3.567386e+06       0.313199             0.0             0.0             0.0          441.533972          768.258735   14667.718175     7023.473739           12.523206          553.786753           189.147825          215.391840            128915.564421        0.157819         0.313199              0.0         0.454250         0.498991         0.450476              0.0              0.0         0.70812            193.524245              91.409016             303.384421            441.533972                 0.0                    0.0                 0.0                  0.0                    0.0                0.0            14.475883         3696.387269             25.211145        33553.301716            30251.295248               8711.979736           3.847431               6.639231  6.961386e+05  2.104896e+05  7.637624e+05  6.768477e+05  1.480647e+07  1.237623e+06  1.509454e+07  1.467068e+07
+min        0.000000           0.000000    0.000000    1.100000e+01            1.000000                 0.000000                     0.000000                      0.000000                0.000000                0.000000                 0.000000                0.000000               0.000000                0.000000                 0.000000                0.000000  0.000000e+00         0.027646    1.100000e+01   0.000000e+00   1.100000e+01  -1.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0            0.000000            0.000000       0.010904        0.000000            0.000000            0.000000             0.000000            0.000000                 0.000000        0.000000         0.000000              0.0         0.000000         0.000000         0.000000              0.0              0.0         0.00000              0.000000               0.000000               0.000000              0.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             1.000000            0.000000              0.000000            0.000000               -1.000000                 -1.000000           0.000000               0.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+25%    32837.000000          80.000000    6.000000    3.174150e+04            1.000000                 0.000000                     0.000000                      0.000000                0.000000                0.000000                 0.000000                0.000000               0.000000                0.000000                 0.000000                0.000000  0.000000e+00         0.630828    1.970427e+04   0.000000e+00   3.174150e+04   4.400000e+01   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0           32.000000            0.000000       0.401811        0.000000            0.000000            0.000000             0.000000            0.000000                 0.000000        0.000000         0.000000              0.0         0.000000         0.000000         0.000000              0.0              0.0         0.00000              0.000000               0.000000               0.000000             32.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             1.000000            0.000000              0.000000            0.000000              118.500000                 -1.000000           0.000000              20.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+50%    44216.000000         443.000000    6.000000    6.143610e+05            2.000000                 1.000000                    29.000000                      0.000000               28.000000                0.000000                15.500000                0.000000               0.000000                0.000000                 0.000000                0.000000  4.471358e+01        10.155480    1.520850e+05   0.000000e+00   4.901380e+05   3.403000e+03   2.394750e+05   4.108591e+04  0.000000e+00  9.351200e+04  8.600000e+01   0.000000e+00   0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00       0.000000             0.0             0.0             0.0           40.000000           32.000000       5.077740        0.662802            0.000000           31.000000            15.333333           13.279056               176.333333        0.000000         0.000000              0.0         0.000000         1.000000         0.000000              0.0              0.0         1.00000             20.666667              15.500000               0.000000             40.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             2.000000           29.000000              1.000000            0.000000             1595.000000                 51.000000           0.000000              28.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+75%    53109.000000         443.000000    6.000000    9.874002e+06            6.000000                 4.000000                   342.000000                    179.000000              245.000000                0.000000                44.500000               81.538559             166.000000                0.000000               116.000000               74.237457  2.440924e+03        64.021635    2.162843e+06   2.542904e+06   9.483798e+06   6.239000e+04   6.171886e+06   2.133433e+06  1.719326e+05  5.365151e+06  3.650800e+04   2.747530e+05   4.776180e+04  3.819714e+04  1.493635e+05  9.000000e+00       0.000000             0.0             0.0             0.0          140.000000          136.000000      31.946852       28.407586            0.000000          517.000000            86.076923          156.801380             24586.672727        0.000000         0.000000              0.0         1.000000         1.000000         1.000000              0.0              0.0         1.00000            112.500000              44.500000             116.000000            140.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0             6.000000          342.000000              4.000000          179.000000            65535.000000                886.000000           2.000000              32.000000  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00
+max    65108.000000       60117.000000   17.000000    1.153364e+08          166.000000               394.000000                 85711.000000                 544600.000000             1460.000000              336.000000              1127.776316              709.935208            1460.000000              500.000000              1382.233503              736.001647  2.818182e+06    181818.181818    7.234407e+07   5.291082e+07   1.011856e+08   7.234407e+07   1.153364e+08   7.234407e+07  2.899482e+07  7.765910e+07  7.234407e+07   1.113162e+08   6.010056e+07  6.481798e+07  1.011910e+08  6.010056e+07       1.000000             0.0             0.0             0.0         5320.000000        12616.000000  166666.666667    90909.090909           53.000000         1460.000000           984.631016          721.448006            520487.225225        1.000000         1.000000              0.0         1.000000         1.000000         1.000000              0.0              0.0         4.00000            986.389286            1127.776316            1382.233503           5320.000000                 0.0                    0.0                 0.0                  0.0                    0.0                0.0           166.000000        85711.000000            394.000000       544600.000000            65535.000000              65535.000000          68.000000              44.000000  8.696540e+06  4.468678e+06  8.696540e+06  8.696540e+06  1.011856e+08  1.414484e+07  1.011856e+08  1.011856e+08
+
+SAMPLE ROWS:
+                                 Flow ID      Source IP   Source Port  Destination IP   Destination Port   Protocol            Timestamp   Flow Duration   Total Fwd Packets   Total Backward Packets  Total Length of Fwd Packets   Total Length of Bwd Packets   Fwd Packet Length Max   Fwd Packet Length Min   Fwd Packet Length Mean   Fwd Packet Length Std  Bwd Packet Length Max   Bwd Packet Length Min   Bwd Packet Length Mean   Bwd Packet Length Std  Flow Bytes/s   Flow Packets/s   Flow IAT Mean   Flow IAT Std   Flow IAT Max   Flow IAT Min  Fwd IAT Total   Fwd IAT Mean   Fwd IAT Std   Fwd IAT Max   Fwd IAT Min  Bwd IAT Total   Bwd IAT Mean   Bwd IAT Std   Bwd IAT Max   Bwd IAT Min  Fwd PSH Flags   Bwd PSH Flags   Fwd URG Flags   Bwd URG Flags   Fwd Header Length   Bwd Header Length  Fwd Packets/s   Bwd Packets/s   Min Packet Length   Max Packet Length   Packet Length Mean   Packet Length Std   Packet Length Variance  FIN Flag Count   SYN Flag Count   RST Flag Count   PSH Flag Count   ACK Flag Count   URG Flag Count   CWE Flag Count   ECE Flag Count   Down/Up Ratio   Average Packet Size   Avg Fwd Segment Size   Avg Bwd Segment Size   Fwd Header Length.1  Fwd Avg Bytes/Bulk   Fwd Avg Packets/Bulk   Fwd Avg Bulk Rate   Bwd Avg Bytes/Bulk   Bwd Avg Packets/Bulk  Bwd Avg Bulk Rate  Subflow Fwd Packets   Subflow Fwd Bytes   Subflow Bwd Packets   Subflow Bwd Bytes  Init_Win_bytes_forward   Init_Win_bytes_backward   act_data_pkt_fwd   min_seg_size_forward  Active Mean   Active Std   Active Max   Active Min  Idle Mean   Idle Std   Idle Max   Idle Min   Label
+0  172.217.6.202-10.42.0.211-443-34140-6    10.42.0.211         34140   172.217.6.202                443          6  05/08/2017 06:40:12           36874                   1                        1                          0.0                           0.0                     0.0                     0.0                      0.0                0.000000                    0.0                     0.0                      0.0                     0.0  0.000000e+00        54.238759         36874.0       0.000000        36874.0        36874.0            0.0            0.0           0.0           0.0           0.0            0.0            0.0      0.000000           0.0           0.0              0               0               0               0                  32                  32      27.119380       27.119380                 0.0                 0.0                  0.0            0.000000                      0.0               0                0                0                0                1                1                0                0             1.0                   0.0                    0.0                    0.0                    32                   0                      0                   0                    0                      0                  0                    1                   0                     1                   0                    1903                       189                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  BENIGN
+1  172.217.6.202-10.42.0.211-443-47239-6    10.42.0.211         47239   172.217.6.202                443          6  05/08/2017 06:40:14           36949                   1                        1                          0.0                           0.0                     0.0                     0.0                      0.0                0.000000                    0.0                     0.0                      0.0                     0.0  0.000000e+00        54.128664         36949.0       0.000000        36949.0        36949.0            0.0            0.0           0.0           0.0           0.0            0.0            0.0      0.000000           0.0           0.0              0               0               0               0                  32                  32      27.064332       27.064332                 0.0                 0.0                  0.0            0.000000                      0.0               0                0                0                0                1                1                0                0             1.0                   0.0                    0.0                    0.0                    32                   0                      0                   0                    0                      0                  0                    1                   0                     1                   0                    2905                       181                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  BENIGN
+2  157.240.18.36-10.42.0.211-443-52917-6  157.240.18.36           443     10.42.0.211              52917          6  05/08/2017 06:40:23              21                   2                        0                         42.0                           0.0                    42.0                     0.0                     21.0               29.698485                    0.0                     0.0                      0.0                     0.0  2.000000e+06     95238.095238            21.0       0.000000           21.0           21.0           21.0           21.0           0.0          21.0          21.0            0.0            0.0      0.000000           0.0           0.0              1               0               0               0                  64                   0   95238.095238        0.000000                 0.0                42.0                 28.0           24.248711                    588.0               0                1                0                0                1                0                0                0             0.0                  42.0                   21.0                    0.0                    64                   0                      0                   0                    0                      0                  0                    2                  42                     0                   0                     148                        -1                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  BENIGN
+3  157.240.18.36-10.42.0.211-443-52917-6  157.240.18.36           443     10.42.0.211              52917          6  05/08/2017 06:40:23           96710                   1                        4                          0.0                          42.0                     0.0                     0.0                      0.0                0.000000                   42.0                     0.0                     10.5                    21.0  4.342881e+02        51.700962         24177.5   46300.171033        93602.0          127.0            0.0            0.0           0.0           0.0           0.0         3108.0         1036.0   1544.222458        2819.0         127.0              0               0               0               0                  32                 140      10.340192       41.360769                 0.0                42.0                  7.0           17.146428                    294.0               0                0                0                0                1                1                0                0             4.0                   8.4                    0.0                   10.5                    32                   0                      0                   0                    0                      0                  0                    1                   0                     4                  42                     148                      1453                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  BENIGN
+4  172.217.6.202-10.42.0.211-443-42432-6    10.42.0.211         42432   172.217.6.202                443          6  05/08/2017 06:40:26           36741                   1                        1                          0.0                           0.0                     0.0                     0.0                      0.0                0.000000                    0.0                     0.0                      0.0                     0.0  0.000000e+00        54.435100         36741.0       0.000000        36741.0        36741.0            0.0            0.0           0.0           0.0           0.0            0.0            0.0      0.000000           0.0           0.0              0               0               0               0                  32                  32      27.217550       27.217550                 0.0                 0.0                  0.0            0.000000                      0.0               0                0                0                0                1                1                0                0             1.0                   0.0                    0.0                    0.0                    32                   0                      0                   0                    0                      0                  0                    1                   0                     1                   0                    2089                       175                  0                     32          0.0          0.0          0.0          0.0        0.0        0.0        0.0        0.0  BENIGN
+
+DISTRIBUTION OF  Label:
+ Label
+BENIGN    627
