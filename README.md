@@ -797,6 +797,3 @@ Developed as an academic machine-learning project with emphasis on:
 
 ---
 
-\<p align="center">
-&#x20; \<strong>ForenSight AI — Evidence-driven malware triage, not automated forensic certainty.\</strong>
-\</p>
