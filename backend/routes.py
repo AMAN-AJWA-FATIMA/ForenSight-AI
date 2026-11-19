@@ -43,10 +43,35 @@ def health():
             status[exp] = f"model failed to load: {e}"
     return jsonify(status)
 
-
 @bp.route("/api/results")
 def results():
-    return _read_json("evaluation_results.json", "Run: python -m src.models.train --experiment both")
+    """Serve original static results and improved network results."""
+    artifacts = _artifacts()
+
+    original_path = artifacts / "evaluation_results.json"
+    improved_path = artifacts / "improved" / "evaluation_results.json"
+
+    if not original_path.exists():
+        return jsonify(
+            error="evaluation_results.json not found. "
+            "Run: python -m src.models.train --experiment both"
+        ), 404
+
+    original = json.loads(original_path.read_text())
+
+    if improved_path.exists():
+        improved = json.loads(improved_path.read_text())
+        network_results = improved.get("network", original.get("network"))
+    else:
+        network_results = original.get("network")
+
+    if "static" not in original or network_results is None:
+        return jsonify(error="Required static or network evaluation results are missing."), 500
+
+    return jsonify({
+        "static": original["static"],
+        "network": network_results,
+    })
 
 
 @bp.route("/api/dashboard-data")

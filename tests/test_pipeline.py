@@ -83,9 +83,14 @@ def test_api_rejects_bad_input(client):
 
 def test_landing_and_dashboard_pages(client):
     home = client.get("/")
-    assert home.status_code == 200 and b"FORENSIC" in home.data and b"/app" in home.data
+    assert home.status_code == 200 and b"ForenSight-AI" in home.data and b"/app" in home.data
     page = client.get("/app")
-    assert page.status_code == 200 and b"FORENSIC AI" in page.data and b"Explainable Android Malware Detection" in page.data
+    assert (
+    page.status_code == 200
+    and b"ForenSight-AI" in page.data
+    and b"Dashboard" in page.data
+    and b"Dataset" in page.data
+)
     for asset in ("js/core.js", "js/dashboard.js", "js/data.js", "js/models.js", "js/explain.js", "js/detect.js", "js/app.js",
                   "js/landing.js", "css/style.css", "css/landing.css", "img/logo.svg"):
         assert client.get(f"/static/{asset}").status_code == 200
@@ -132,3 +137,70 @@ def test_missing_model_is_handled(tmp_path):
     c = create_app(tmp_path).test_client()
     assert c.get("/api/results").status_code == 404
     assert c.post("/api/static/predict", json={"features": {"a": 1}}).status_code in (400, 503)
+
+def test_network_model_prefers_improved_artifact(tmp_path):
+    from src.models.inference import _model_path
+
+    improved_dir = tmp_path / "improved"
+    improved_dir.mkdir()
+
+    original_model = tmp_path / "network_model.joblib"
+    improved_model = improved_dir / "network_model.joblib"
+
+    original_model.touch()
+    improved_model.touch()
+
+    assert _model_path("network", tmp_path) == improved_model
+    assert _model_path("static", tmp_path) == tmp_path / "static_model.joblib"
+
+
+def test_results_api_prefers_improved_network_results(tmp_path):
+    from backend.app import create_app
+
+    original_results = {
+        "static": {"best_model": "Static Original"},
+        "network": {"best_model": "Network Original"},
+    }
+
+    improved_results = {
+        "network": {"best_model": "Hist Gradient Boosting"},
+    }
+
+    (tmp_path / "evaluation_results.json").write_text(
+        json.dumps(original_results)
+    )
+
+    improved_dir = tmp_path / "improved"
+    improved_dir.mkdir()
+
+    (improved_dir / "evaluation_results.json").write_text(
+        json.dumps(improved_results)
+    )
+
+    client = create_app(tmp_path).test_client()
+    response = client.get("/api/results")
+
+    assert response.status_code == 200
+
+    results = response.get_json()
+    assert results["static"]["best_model"] == "Static Original"
+    assert results["network"]["best_model"] == "Hist Gradient Boosting"
+
+
+def test_results_api_falls_back_when_improved_results_missing(tmp_path):
+    from backend.app import create_app
+
+    original_results = {
+        "static": {"best_model": "Static Original"},
+        "network": {"best_model": "Network Original"},
+    }
+
+    (tmp_path / "evaluation_results.json").write_text(
+        json.dumps(original_results)
+    )
+
+    client = create_app(tmp_path).test_client()
+    response = client.get("/api/results")
+
+    assert response.status_code == 200
+    assert response.get_json()["network"]["best_model"] == "Network Original"
