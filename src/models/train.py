@@ -11,7 +11,12 @@ explain -> save pipeline (joblib) + metrics (JSON).
 import argparse, json, time
 import joblib, numpy as np, pandas as pd
 from sklearn.base import clone
-from sklearn.ensemble import GradientBoostingClassifier, HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.ensemble import (
+    ExtraTreesClassifier,
+    GradientBoostingClassifier,
+    HistGradientBoostingClassifier,
+    RandomForestClassifier,
+)
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import (GridSearchCV, GroupShuffleSplit, RandomizedSearchCV,
@@ -29,52 +34,169 @@ from src.preprocessing.loaders import load_network, load_static
 SEED = config.RANDOM_STATE
 
 
-def make_models(improved=False):
-    """name -> (pipeline, tuning grid, search type). Scaling only where the algorithm needs it (LR).
 
-    improved=False -> exactly the submitted models/grids.
-    improved=True  -> network-experiment upgrade (see CHANGES.md): a regularised, larger Random Forest search
-                      (balanced_subsample class weights, bigger min_samples_leaf, depth cap = less overfitting and a
-                      much smaller model file) and a 4th model, HistGradientBoosting, which handles large flow
-                      tables far better than the plain Gradient Boosting.
+def make_models(improved=False):
     """
+    Return model pipelines, hyperparameter grids, and search strategies.
+
+    Random Forest:
+        Pre-pruning: max_depth, min_samples_split, min_samples_leaf,
+                     max_features.
+        Post-pruning: ccp_alpha.
+
+    Gradient Boosting:
+        Pre-pruning: max_depth, min_samples_split, min_samples_leaf.
+        Post-pruning: ccp_alpha.
+
+    Logistic Regression:
+        Regularized using C and balanced class weights.
+
+    HistGradientBoosting:
+        Regularized using max_leaf_nodes, min_samples_leaf,
+        and l2_regularization.
+    """
+
     imp = ("impute", SimpleImputer(strategy="median"))
+
+    # Parameters shared by both experiment configurations.
+    rf_grid = {
+        "model__n_estimators": [100, 200, 300],
+        "model__max_depth": [8, 12, 20, 30, None],
+        "model__min_samples_split": [2, 5, 10, 20],
+        "model__min_samples_leaf": [1, 2, 5, 10],
+        "model__max_features": ["sqrt", 0.3],
+        "model__ccp_alpha": [0.0, 0.00001, 0.0001, 0.001],
+    }
+
+    gb_grid = {
+        "model__n_estimators": [100, 200],
+        "model__learning_rate": [0.05, 0.1],
+        "model__max_depth": [1, 2, 3],
+        "model__min_samples_split": [2, 5, 10],
+        "model__min_samples_leaf": [2, 5, 10],
+        "model__ccp_alpha": [0.0, 0.00001, 0.0001, 0.001],
+    }
+
     if improved:
         return {
             "Logistic Regression": (
-                Pipeline([imp, ("scale", StandardScaler()),
-                          ("model", LogisticRegression(max_iter=2000, class_weight="balanced", random_state=SEED))]),
-                {"model__C": [0.01, 0.1, 1, 10]}, "grid"),
+                Pipeline([
+                    imp,
+                    ("scale", StandardScaler()),
+                    ("model", LogisticRegression(
+                        max_iter=2000,
+                        class_weight="balanced",
+                        random_state=SEED,
+                    )),
+                ]),
+                {"model__C": [0.01, 0.1, 1, 10]},
+                "grid",
+            ),
+
             "Random Forest": (
-                Pipeline([imp, ("model", RandomForestClassifier(class_weight="balanced_subsample", n_jobs=-1,
-                                                                random_state=SEED))]),
-                {"model__n_estimators": [200, 300], "model__max_depth": [12, 20, 30, None],
-                 "model__min_samples_leaf": [2, 5, 10], "model__max_features": ["sqrt", 0.3]}, "random"),
+                Pipeline([
+                    imp,
+                    ("model", RandomForestClassifier(
+                        class_weight="balanced_subsample",
+                        n_jobs=-1,
+                        random_state=SEED,
+                    )),
+                ]),
+                rf_grid,
+                "random",
+            ),
+
             "Gradient Boosting": (
-                Pipeline([imp, ("model", GradientBoostingClassifier(random_state=SEED))]),
-                {"model__n_estimators": [100, 200], "model__learning_rate": [0.05, 0.1],
-                 "model__max_depth": [2, 3]}, "random"),
+                Pipeline([
+                    imp,
+                    ("model", GradientBoostingClassifier(
+                        random_state=SEED,
+                    )),
+                ]),
+                gb_grid,
+                "random",
+            ),
+
             "Hist Gradient Boosting": (
-                Pipeline([imp, ("model", HistGradientBoostingClassifier(class_weight="balanced", early_stopping=False,
-                                                                        random_state=SEED))]),
-                {"model__learning_rate": [0.03, 0.06, 0.1], "model__max_iter": [150, 300],
-                 "model__max_leaf_nodes": [15, 31, 63], "model__min_samples_leaf": [20, 50, 100],
-                 "model__l2_regularization": [0.0, 1.0, 10.0]}, "random"),
+                Pipeline([
+                    imp,
+                    ("model", HistGradientBoostingClassifier(
+                        class_weight="balanced",
+                        early_stopping=False,
+                        random_state=SEED,
+                    )),
+                ]),
+                {
+                    "model__learning_rate": [0.03, 0.06, 0.1],
+                    "model__max_iter": [150, 300],
+                    "model__max_leaf_nodes": [15, 31, 63],
+                    "model__min_samples_leaf": [20, 50, 100],
+                    "model__l2_regularization": [0.0, 1.0, 10.0],
+                },
+                "random",
+            ),
+            "Extra Trees": (
+                Pipeline([
+                        imp,
+                        ("model", ExtraTreesClassifier(
+                            class_weight="balanced",
+                            n_jobs=-1,
+                            random_state=SEED,
+                        )),
+                    ]),
+                    {
+                        "model__n_estimators": [200, 300],
+                        "model__max_depth": [8, 12, 16],
+                        "model__min_samples_split": [10, 20],
+                        "model__min_samples_leaf": [5, 10, 20],
+                        "model__max_features": ["sqrt", 0.5],
+                        "model__ccp_alpha": [0.0, 0.0001, 0.001],
+                    },
+                    "random",
+                ),
         }
+
     return {
         "Logistic Regression": (
-            Pipeline([imp, ("scale", StandardScaler()),
-                      ("model", LogisticRegression(max_iter=2000, class_weight="balanced", random_state=SEED))]),
-            {"model__C": [0.01, 0.1, 1, 10]}, "grid"),
+            Pipeline([
+                imp,
+                ("scale", StandardScaler()),
+                ("model", LogisticRegression(
+                    max_iter=2000,
+                    class_weight="balanced",
+                    random_state=SEED,
+                )),
+            ]),
+            {"model__C": [0.01, 0.1, 1, 10]},
+            "grid",
+        ),
+
         "Random Forest": (
-            Pipeline([imp, ("model", RandomForestClassifier(class_weight="balanced", n_jobs=-1, random_state=SEED))]),
-            {"model__n_estimators": [100, 200], "model__max_depth": [None, 10, 20],
-             "model__min_samples_leaf": [1, 2, 4]}, "random"),
+            Pipeline([
+                imp,
+                ("model", RandomForestClassifier(
+                    class_weight="balanced",
+                    n_jobs=-1,
+                    random_state=SEED,
+                )),
+            ]),
+            rf_grid,
+            "random",
+        ),
+
         "Gradient Boosting": (
-            Pipeline([imp, ("model", GradientBoostingClassifier(random_state=SEED))]),
-            {"model__n_estimators": [100, 200], "model__learning_rate": [0.05, 0.1],
-             "model__max_depth": [2, 3]}, "random"),
+            Pipeline([
+                imp,
+                ("model", GradientBoostingClassifier(
+                    random_state=SEED,
+                )),
+            ]),
+            gb_grid,
+            "random",
+        ),
     }
+
+
 
 
 def fit_kwargs(name, y):
