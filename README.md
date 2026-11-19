@@ -11,7 +11,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat-square&logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Backend-black?style=flat-square&logo=flask)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?style=flat-square)
-![Project](https://img.shields.io/badge/Academic%20Project-CSIT-purple?style=flat-square)
+
 
 ---
 
